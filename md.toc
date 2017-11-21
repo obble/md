@@ -1,0 +1,126 @@
+## Interface: 11200
+## Author: modernist
+## Title: md
+## Notes: do a ui.
+##SavedVariablesPerCharacter: MODUI_VAR
+
+#  ~pre-load custom behaviour
+customise\preload.lua
+
+#  load variables
+var\var.lua
+
+#  libraries
+# credits: shirsig
+libraries\cleanup\Clean_Up.lua
+
+#  deploy core
+core\api.lua
+core\skin.lua
+core\string.lua
+core\flagcarriers.lua
+core\inventory.lua
+core\math.lua
+core\slashcmd.lua
+core\colour.lua
+core\tables\totems.lua
+core\tables\spells.lua
+core\templates.lua
+core\transform.lua
+
+#  fonts
+typefaces\typefaces.lua
+
+#  skin buttons & frames
+borders\buttons\action.lua
+borders\buttons\auction.lua
+borders\buttons\aura.lua
+borders\buttons\bag.lua
+borders\buttons\bank.lua
+borders\buttons\character.lua
+borders\buttons\chat.lua
+borders\buttons\crafting.lua
+borders\buttons\inspect.lua
+borders\buttons\loot.lua
+borders\buttons\macro.lua
+borders\buttons\micromenu.lua
+borders\buttons\party.lua
+borders\buttons\quest.lua
+borders\buttons\spell.lua
+borders\buttons\talent.lua
+borders\buttons\target.lua
+borders\buttons\trade.lua
+borders\addons\vanillaguide.lua
+borders\frames\chat.lua
+borders\frames\chatballoon.lua
+borders\frames\stats.lua
+borders\frames\tip.lua
+
+#  action bar & buttons
+elements\actionbars\bags.lua
+elements\actionbars\cd.lua
+elements\actionbars\hotkey.lua
+elements\actionbars\dock.lua
+elements\actionbars\keypress.lua
+elements\actionbars\range.lua
+elements\actionbars\stats.lua
+elements\actionbars\xp.lua
+
+#  auction house
+elements\auction\auction.lua
+
+#  castbar
+elements\castbar\castbar.lua
+
+#  chat
+elements\chat\frame.lua
+elements\chat\event.lua
+elements\chat\quests.lua
+
+#  combat text
+elements\combattext\ct.lua
+
+#  errors & system messages
+elements\error\error.lua
+
+#  inventory system
+elements\inventory\bag\bag.lua
+elements\inventory\bank\bank.lua
+elements\inventory\update.lua
+elements\inventory\tools\greys.lua
+elements\inventory\tools\sort.lua
+elements\inventory\tools\tradeskills.lua
+
+#  maps: world;mini;zone
+elements\maps\mini.lua
+elements\maps\pins.lua
+elements\maps\pvp.lua
+elements\maps\world.lua
+
+#  nameplates
+elements\nameplates\nameplates.lua
+
+#  social panels
+elements\social\friends.lua
+elements\social\guild.lua
+elements\social\who.lua
+
+#  stopwatch
+elements\stopwatch\stopwatch.lua
+
+#  talent builds
+elements\talents\talents.lua
+
+#  tooly tip
+elements\tooltip\layout.lua
+elements\tooltip\content.lua
+
+#  quest tracker clickthrough
+elements\tracker\click.lua
+
+# unitframes
+elements\unitframe\unit.lua
+elements\unitframe\aura.lua
+
+#  ~post-load custom behaviour
+customise\postload.lua
