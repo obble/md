@@ -11,13 +11,13 @@ rewriting [modui](https://github.com/obble/modui "mod ui") from the ground up in
    options can currently be toggled on or off in [vars/var.lua](https://github.com/obble/md/tree/master/var/var.lua)
 
 ## TODO
-⋅⋅* enemy castbars
-⋅⋅* unit  frames
-⋅⋅* group frames
-⋅⋅* options window
-⋅⋅* cookie cutter talent guides
-⋅⋅* short boss descriptions?
-⋅⋅* other stuff
-⋅⋅* ...
+* enemy castbars
+* unit  frames
+* group frames
+* options window
+* cookie cutter talent guides
+* short boss descriptions?
+* other stuff
+* ...
 
 ---
