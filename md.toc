@@ -119,8 +119,9 @@ elements\tooltip\content.lua
 elements\tracker\click.lua
 
 # unitframes
-elements\unitframe\unit.lua
 elements\unitframe\aura.lua
+elements\unitframe\move.lua
+elements\unitframe\unit.lua
 
 #  ~post-load custom behaviour
 customise\postload.lua

@@ -59,14 +59,14 @@
         PlayerPVPIcon:SetPoint('CENTER', PlayerFrame, 'LEFT', 60, 16)
 
         TargetFrame.Elite = TargetFrameTextureFrame:CreateTexture(nil, 'BORDER')
-        TargetFrame.Elite:SetTexture[[Interface\AddOns\md\art\unitframe\unitframe\UI-TargetingFrame-Elite]]
+        TargetFrame.Elite:SetTexture[[Interface\AddOns\md\art\unitframe\UI-TargetingFrame-Elite]]
         TargetFrame.Elite:SetWidth(128)
         TargetFrame.Elite:SetHeight(128)
         TargetFrame.Elite:SetPoint('TOPRIGHT', TargetFrame)
         TargetFrame.Elite:Hide()
 
         TargetFrame.Rare = TargetFrameTextureFrame:CreateTexture(nil, 'BORDER')
-        TargetFrame.Rare:SetTexture[[Interface\AddOns\md\art\unitframe\unitframe\UI-TargetingFrame-Rare-Elite]]
+        TargetFrame.Rare:SetTexture[[Interface\AddOns\md\art\unitframe\UI-TargetingFrame-Rare-Elite]]
         TargetFrame.Rare:SetWidth(128)
         TargetFrame.Rare:SetHeight(128)
         TargetFrame.Rare:SetPoint('TOPRIGHT', TargetFrame)

@@ -19,7 +19,7 @@
             editbox         = true,      --  editbox on top of chat
             ilink           = true,      --  strip [brackets] off've items in chat
             tformat         = true,      --  custom text strings
-            tstamps         = true,      -- timestamps
+            tstamps         = true,      --  timestamps
         },
         --  combat text
         --      MODUI_VAR['elements'].combattext dependent
@@ -29,6 +29,7 @@
         },
         --  enable/disable
         ['elements']        = {
+            targetaura      = false,     --  true: 16 buffs on target always, false: 16 on mouseover
             actionbar       = true,
             inventory       = true,
             castbar         = false,
@@ -43,7 +44,7 @@
             e_castbar       = true,
             hotkeys         = true,
             keypress        = {
-                self        = true,
+                onself      = true,
                 down        = true,
             },
             map             = {
