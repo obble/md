@@ -1,11 +1,14 @@
 
 
-    local var = MODUI_VAR['elements']['unit']
+    local var   = MODUI_VAR['elements']['unit']
+    local sbar  = MODUI_VAR['statusbar']
 
     --local HealComm       = AceLibrary'HealComm-1.0'
     local TEXTURE        = [[Interface\AddOns\md\customise\statusbar\statusbar.tga]]
     local NAME_TEXTURE   = [[Interface\AddOns\md\customise\statusbar\namebg.tga]]
-    local BACKDROP       = {bgFile = [[Interface\Tooltips\UI-Tooltip-Background]]}
+    local BACKDROP       = {
+        bgFile = [[Interface\Tooltips\UI-Tooltip-Background]]
+    }
     local diffThreshold  = .1
 
     local H = {}
@@ -33,7 +36,7 @@
         PlayerFrameBackground.bg:SetPoint('TOPLEFT', PlayerFrameBackground)
         PlayerFrameBackground.bg:SetPoint('BOTTOMRIGHT', PlayerFrameBackground, 0, 22)
         PlayerFrameBackground.bg:SetVertexColor(colour.r, colour.g, colour.b, 1)
-        PlayerFrameBackground.bg:SetTexture(NAME_TEXTURE)
+        if sbar.texture then PlayerFrameBackground.bg:SetTexture(NAME_TEXTURE) end
         PlayerFrameBackground.bg:SetTexCoord(1, 0, 0, 1)
 
         PlayerFrame.status = PlayerFrameTexture:GetParent():CreateFontString(nil, 'OVERLAY')
@@ -44,11 +47,11 @@
 
         PlayerFrameHealthBar:SetBackdrop(BACKDROP)
         PlayerFrameHealthBar:SetBackdropColor(0, 0, 0, .6)
-        PlayerFrameHealthBar:SetStatusBarTexture(TEXTURE)
+        if sbar.texture then PlayerFrameHealthBar:SetStatusBarTexture(TEXTURE) end
 
         PlayerFrameManaBar:SetBackdrop(BACKDROP)
         PlayerFrameManaBar:SetBackdropColor(0, 0, 0, .6)
-        PlayerFrameManaBar:SetStatusBarTexture(TEXTURE)
+        if sbar.texture then PlayerFrameManaBar:SetStatusBarTexture(TEXTURE)   end
 
         PlayerPVPIcon:SetHeight(48) 
         PlayerPVPIcon:SetWidth(48)
@@ -77,16 +80,16 @@
         TargetPVPIcon:SetPoint('CENTER', TargetFrame, 'RIGHT', -42, 16)
         TargetPVPIcon:SetDrawLayer('OVERLAY', 7)
 
-        TargetFrameNameBackground:SetTexture(NAME_TEXTURE)
+        if sbar.texture then TargetFrameNameBackground:SetTexture(NAME_TEXTURE) end
         TargetFrameNameBackground:SetDrawLayer'BORDER'
 
         TargetFrameHealthBar:SetBackdrop(BACKDROP)
         TargetFrameHealthBar:SetBackdropColor(0, 0, 0, .6)
-        TargetFrameHealthBar:SetStatusBarTexture(TEXTURE)
+        if sbar.texture then TargetFrameHealthBar:SetStatusBarTexture(TEXTURE)  end
 
         TargetFrameManaBar:SetBackdrop(BACKDROP)
         TargetFrameManaBar:SetBackdropColor(0, 0, 0, .6)
-        TargetFrameManaBar:SetStatusBarTexture(TEXTURE)
+        if sbar.texture then TargetFrameManaBar:SetStatusBarTexture(TEXTURE)    end
 
         PlayerFrameGroupIndicator:SetAlpha(0)
 
@@ -133,13 +136,15 @@
             v:SetWidth(48) 
         end
 
-        for _, v in pairs(
-            {
-                 TargetofTargetHealthBar,
-                 TargetofTargetManaBar
-            }
-        ) do
-            v:SetStatusBarTexture(TEXTURE)
+        if  sbar.texture then 
+            for _, v in pairs(
+                {
+                     TargetofTargetHealthBar,
+                     TargetofTargetManaBar
+                }
+            ) do
+                v:SetStatusBarTexture(TEXTURE)
+            end
         end
 
         for i = 1, 4 do 
@@ -155,7 +160,7 @@
             ) do
                 v:SetBackdrop(BACKDROP) 
                 v:SetBackdropColor(0, 0, 0, .6)
-                v:SetStatusBarTexture(TEXTURE)
+                if sbar.texture then v:SetStatusBarTexture(TEXTURE) end
             end
         end
     end

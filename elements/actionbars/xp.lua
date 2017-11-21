@@ -3,6 +3,7 @@
     local colour    = RAID_CLASS_COLORS[class]
     local H         = {}
     local var       = MODUI_VAR['colour']
+    local sbar      = MODUI_VAR['statusbar']
 
     local events    = {
         'PLAYER_LOGIN',
