@@ -6,6 +6,7 @@
     local H      = {}
 
     H.ChatFrame_OnUpdate = ChatFrame_OnUpdate
+    H.FCF_Tab_OnClick    = FCF_Tab_OnClick
     H.FCF_SetTabPosition = FCF_SetTabPosition
     H.FCF_FlashTab       = FCF_FlashTab
 
@@ -15,45 +16,52 @@
         [11] = 18, [12] = 19, [13] = 20,
     }
 
+    local OnEnter = function()
+        this.hover:SetText'› '
+        GameTooltip_AddNewbieTip(CHAT_OPTIONS_LABEL, 1, 1, 1, NEWBIE_TOOLTIP_CHATOPTIONS, 1)
+    end
+
+    local OnLeave = function()
+        this.hover:SetText''
+        GameTooltip:Hide()
+    end
+
     local AddTab = function(f)
-        if  not f.mod then
-            local tab = _G[f:GetName()..'Tab']
+        local tab = _G[f:GetName()..'Tab']
 
-            local a, b, c = tab:GetRegions()
-            for _, v in pairs({a, b, c}) do v:Hide() end
-
-            local flash = _G[f:GetName()..'TabFlash']
-            local a = flash:GetRegions()
-            a:SetTexture''
-
-            local text = _G[f:GetName()..'TabText']
-            text:SetJustifyH'CENTER'
-            text:SetWidth(40)
-            text:SetFont(STANDARD_TEXT_FONT, 14, 'OUTLINE')
-            text:SetShadowOffset(0, 0)
-            text:SetDrawLayer('OVERLAY', 7)
-
-            local hover = tab:CreateFontString(nil, 'OVERLAY')
-            hover:SetFont(STANDARD_TEXT_FONT, 13, 'OUTLINE')
-            hover:SetShadowOffset(0, 0)
-            hover:SetPoint('RIGHT', text, 'LEFT')
-            hover:SetTextColor(colour.r, colour.g, colour.b)
-            hover:SetText''
-
-            tab:GetHighlightTexture():SetTexture''
-
-            tab:SetScript('OnEnter', function()
-                hover:SetText'· '
-                GameTooltip_AddNewbieTip(CHAT_OPTIONS_LABEL, 1, 1, 1, NEWBIE_TOOLTIP_CHATOPTIONS, 1)
-            end)
-
-            tab:SetScript('OnLeave', function()
-                hover:SetText''
-                GameTooltip:Hide()
-            end)
-
-            f.mod = true
+        local a, b, c = tab:GetRegions()
+        for _, v in pairs(
+            {
+                a, b, c
+            }
+        ) do 
+            v:Hide()
         end
+
+        local flash = _G[f:GetName()..'TabFlash']
+        local a = flash:GetRegions()
+        a:SetTexture''
+
+        local text = _G[f:GetName()..'TabText']
+        text:SetJustifyH'CENTER'
+        text:SetFont(STANDARD_TEXT_FONT, 14, 'OUTLINE')
+        text:SetShadowOffset(0, 0)
+        text:SetDrawLayer('OVERLAY', 7)
+
+        if  not tab.hover then
+            tab.hover = tab:CreateFontString(nil, 'OVERLAY')
+            tab.hover:SetFont(STANDARD_TEXT_FONT, 13, 'OUTLINE')
+            tab.hover:SetShadowOffset(0, 0)
+            tab.hover:SetPoint('RIGHT', text, 'LEFT')
+            tab.hover:SetTextColor(0, 1, 0)
+        end
+
+        tab.hover:SetText''
+
+        tab:GetHighlightTexture():SetTexture''
+
+        tab:SetScript('OnEnter', OnEnter)
+        tab:SetScript('OnLeave', OnLeave)
     end
 
     local OnMouseWheel = function()
@@ -101,6 +109,12 @@
 
     local SetTabPosition = function(f, x)
         H.FCF_SetTabPosition(f, x)
+        AddTab(f)
+    end
+
+    local FCF_Tab_OnClick = function(bu)
+        local f = _G['ChatFrame'..this:GetID()]
+        H.FCF_Tab_OnClick(bu)
         AddTab(f)
     end
 
