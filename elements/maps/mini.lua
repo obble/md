@@ -42,7 +42,7 @@
         GameTimeFrame:SetPoint('BOTTOM', 84, 24)
 
         MiniMapMailFrame:ClearAllPoints()
-        MiniMapMailFrame:SetPoint('TOPRIGHT', 7, -20)
+        MiniMapMailFrame:SetPoint('TOPRIGHT', 0, -14)
 
         MinimapZoneText:ClearAllPoints()
         MinimapZoneText:SetPoint('TOP', Minimap, 0, 17)

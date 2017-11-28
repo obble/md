@@ -99,12 +99,7 @@
         PetHitIndicator:SetText(nil)
         PetHitIndicator.SetText = function() end
 
-        TargetLevelText:SetJustifyH'LEFT'
-        TargetLevelText:SetPoint('LEFT', TargetFrameTextureFrame, 'CENTER', 56, -16)
-
         TargetofTargetName:SetHeight(30)
-        TargetofTargetName:ClearAllPoints()
-        TargetofTargetName:SetPoint('TOPLEFT', TargetofTargetTextureFrame, 'BOTTOMLEFT', 46, 16)
 
         TargetofTargetPortrait:SetHeight(37)    -- fix the ugly offset on tot portraits
         TargetofTargetPortrait:SetWidth(37)
@@ -338,10 +333,20 @@
         H.TargetofTarget_Update()
         local _, class = UnitClass'targettarget'
         local colour = RAID_CLASS_COLORS[class]
+        local name   = UnitName'targettarget'
+
         if  UnitIsPlayer'targettarget' then
             TargetofTargetName:SetTextColor(colour.r, colour.g, colour.b)
         else
             TargetofTargetName:SetTextColor(1, .8, 0)
+        end
+
+        TargetofTargetName:ClearAllPoints()
+        
+        if  name and string.len(name) > 12 then
+            TargetofTargetName:SetPoint('TOPLEFT', TargetofTargetTextureFrame, 46, -29)
+        else
+            TargetofTargetName:SetPoint('TOPLEFT', TargetofTargetTextureFrame, 46, -24)
         end
     end
 

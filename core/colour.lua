@@ -19,8 +19,8 @@
 
     RAID_CLASS_COLORS = MODUI_CLASS_COLORS
 
-    H.TargetFrame_CheckClassification = TargetFrame_CheckClassification
-
+    H.TargetFrame_CheckClassification   = TargetFrame_CheckClassification
+    H.GroupLootFrame_OnShow             = GroupLootFrame_OnShow
 
     local b = GameTimeFrame:CreateTexture(nil, 'OVERLAY')
     b:SetPoint('TOPLEFT', GameTimeFrame)

@@ -19,10 +19,12 @@
                     end
                 end
             else
-                if  online then
-                    text:SetTextColor(1, 1, 1)
-                else
-                    text:SetTextColor(.5, .5, .5)
+                if  text then
+                    if  online then
+                        text:SetTextColor(1, 1, 1)
+                    else
+                        text:SetTextColor(.5, .5, .5)
+                    end
                 end
             end
         end
