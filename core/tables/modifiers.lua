@@ -81,6 +81,7 @@
 	            'Pyroblast',
 	            'Scorch',
         	}
+    	}
     }
 
     --

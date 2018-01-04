@@ -24,19 +24,19 @@
         return text
      end
 
-     function AVAB_round(time)
-         local m, s, text
-         if time <= 0 then
-             text = ''
-         elseif time < 3600 and time > 60 then
-             m = floor(mod(time, 3600)/60)
-             s = mod(time, 60)
-             text = s == 0 and format('|cffffffff%d|rm', m) or format('|cffffffff%d|rm |cffffffff%d|rs', m, s)
-         else
-             s = mod(time, 60)
-             text = format('|cffffffff%d|rs', s)
-         end
-         return text
+    function AVAB_round(time)
+        local m, s, text
+        if  time <= 0 then
+            text = ''
+        elseif time < 3600 and time > 60 then
+            m = floor(mod(time, 3600)/60)
+            s = mod(time, 60)
+            text = s == 0 and format('|cffffffff%d|rm', m) or format('|cffffffff%d|rm |cffffffff%d|rs', m, s)
+        else
+            s = mod(time, 60)
+            text = format('|cffffffff%d|rs', s)
+        end
+        return text
      end
 
      function decimal_round(n, dp)      -- ROUND TO 1 DECIMAL PLACE

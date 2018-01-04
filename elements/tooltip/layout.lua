@@ -124,18 +124,26 @@
     local OnEvent = function()
         for  _, v in next, tooltips do
             local f = _G[v]
+            if f then
+                f.HonShow = f:GetScript'OnShow'
+                f.HonHide = f:GetScript'OnHide'
 
-            f.HonShow = f:GetScript'OnShow'
-            f.HonHide = f:GetScript'OnHide'
+                f:SetScript('OnShow', OnShow)
+                f:SetScript('OnHide', OnHide)
 
-            f:SetScript('OnShow', OnShow)
-            f:SetScript('OnHide', OnHide)
-
-            AddAnchor()
-            AddText(GameTooltipHeaderText,  13)
-            AddText(GameTooltipText,        12)
+                AddAnchor()
+                AddText(GameTooltipHeaderText,  13)
+                AddText(GameTooltipText,        12)
+            end
         end
     end
+
+    local OnEnter = function()
+        H.UnitFrame_OnEnter()
+        AddStatusBar(GameTooltipStatusBar, GameTooltip)   
+    end
+
+    UnitFrame_OnEnter = OnEnter
 
     GameTooltip_SetDefaultAnchor = SetDefaultAnchor
 

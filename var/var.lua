@@ -38,10 +38,13 @@
                 twentyfour  = true,
                 stopwatch   = true,
             },
-            questchat       = true,
+            questchat       = false,
             combattext      = true,
             cooldown_text   = true,
-            e_castbar       = true,
+            e_castbar       = {
+                enable      = true,
+                dummy       = false,
+            },
             hotkeys         = true,
             keypress        = {
                 onself      = true,
@@ -74,7 +77,20 @@
                 party       = true,
                 tot         = true,
                 pet         = true,
-                raid        = true,
+                raid        = {
+                    enable  = true,
+                    L2R     = true,
+                    debuff  = false,
+                    x       = 53,
+                    y       = 24,
+                    minimap = {
+                                'TOP',
+                                Minimap,
+                                'BOTTOM',
+                                2, 
+                                -70
+                            },
+                },
                 value       = {
                     percent = true,
                     truth   = true,
@@ -93,8 +109,20 @@
         ['who'] = false,
     }
 
-    local cV = function(var, j, event)
+    cV  = function(var, j, event)
         SetCVar(var, j, event)
+    end
+
+    gcV = function(var)
+        local cv = GetCVar(var)
+        if  cv == '1' then
+            return true
+        elseif cv == '0' then
+            return false
+        else
+            print('non-binary or non-existent cvar: '..var)
+            return false
+        end
     end
 
      --

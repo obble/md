@@ -195,7 +195,7 @@
             if  sz then
                 for i = 1, 12 do
                     local d12 = _G['moddungeonmap'..i]
-                    d12:SetTexture('Interface\\AddOns\\md\\art\\instances\\'..z..'\\'..dungeonsubzone(z, sz)..'\\'..z..i)
+                    d12:SetTexture('Interface\\AddOns\\md\\art\\instances\\'..z..'\\'..UpdateSubZones(z, sz)..'\\'..z..i)
                     d12:Show()
                 end
             end
@@ -230,7 +230,7 @@
     end
 
     local UpdateBlipColour = function(icon, unit)
-        if not (icon and unit) then return end
+        if  not (icon and unit) then return end
         local _, name = UnitClass(unit)
         if  not  name then return end
 
@@ -241,6 +241,18 @@
             icon:GetParent():SetWidth(30)
             icon:GetParent():SetHeight(30)
         end
+
+        for  _, v in pairs(MODUI_CARRIERS) do
+            print('1: '..v)
+            if  string.find(v, string.lower(name)) then
+                print(name)
+                local x = UnitFactionGroup'player' == 'Alliance' and 'Horde' or 'Alliance'
+                icon:SetTexture('Interface\\WorldStateFrame\\'..x..'Flag')
+                icon:SetPoint('CENTER', 8, 8)
+                icon:SetVertexColor(1, 1, 1)
+                return
+            end
+         end
 
         local c = RAID_CLASS_COLORS[name]
         if  math.ceil(GetTime()) < .5 then

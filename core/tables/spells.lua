@@ -2,788 +2,1442 @@
 
     MODUI_SPELLCASTS_TO_TRACK = {
             -- misc
-        ['Acid Spit']                   = {
+        ['Acid Spit']                       = {
             [[Interface\Icons\spell_nature_acid_01]],
             3
         },
-        ['Bomb']                        = {
+        ['Bomb']                            = {
             [[Interface\Icons\spell_fire_selfdestruct]], 
             2
         },
-        ['Black Sludge']                = {
+        ['Black Sludge']                    = {
             [[Interface\Icons\spell_shadow_callofbone]],
             3
         },
-        ['Boulder']                     = {
+        ['Boulder']                         = {
             [[Interface\Icons\inv_stone_10]],
             2
         },
-        ['Chained Bolt']                = {
+        ['Chained Bolt']                    = {
             [[Interface\Icons\spell_nature_chainlightning]],
             1.8
         },
-        ['Chains of Ice']               = {
+        ['Chains of Ice']                   = {
             [[Interface\Icons\spell_frost_chainsofice]],
             1.5
         },
-        ['Clone']                       = {
+        ['Clone']                           = {
             [[Interface\Icons\spell_shadow_blackplague]],
             2.5
         },
-        ['Creeping Mold']               = {
+        ['Creeping Mold']                   = {
             [[Interface\Icons\spell_shadow_creepingplague]],
             3
         },
-        ['Cripple']                     = {
+        ['Cripple']                         = {
             [[Interface\Icons\spell_shadow_cripple]],
             3
         },
-        ['Crystal Flash']               = {
+        ['Crystal Flash']                   = {
             [[Interface\Icons\spell_shadow_teleport]],
-            2
+            2,
+            nil,
+            nil,
+            nil,
+            true
         },
-        ['Crystal Gaze']                = {
+        ['Crystal Gaze']                    = {
             [[Interface\Icons\ability_golemthunderclap]],
-            2
+            2,
+            nil,
+            nil,
+            nil,
+            true
         },
-        ['Crystalline Slumber']         = {
+        ['Crystalline Slumber']             = {
             [[Interface\Icons\spell_nature_sleep]],
-            2
+            2,
+            nil,
+            nil,
+            nil,
+            true
         },
-        ['Cultivate Packet of Seeds']   = {
+        ['Cultivate Packet of Seeds']       = {
             [[Interface\Icons\inv_misc_food_45]],
             10
         },
-        ['Curse of Mending']            = {
+        ['Curse of Mending']                = {
             [[Interface\Icons\spell_shadow_antishadow]],
             1
         },
-        ['Curse of the Deadwood']       = {
+        ['Curse of the Deadwood']           = {
             [[Interface\Icons\spell_shadow_gathershadows]],
             2
         },
-        ['Curse of the Fallen Magram']  = {
+        ['Curse of the Fallen Magram']      = {
             [[Interface\Icons\spell_shadow_unholyfrenzy]],
             2
         },
-        ['Dark Sludge']                 = {
+        ['Dark Sludge']                     = {
             [[Interface\Icons\spell_shadow_creepingplague]],
             5
         },
-        ['Dire Growl']                  = {
+        ['Dire Growl']                      = {
             [[Interface\Icons\ability_racial_cannibalize]],
-            1
+            1,
+            nil,
+            nil,
+            nil,
+            true
         },
-        ['Enveloping Winds']            = {
+        ['Enveloping Winds']                = {
             [[Interface\Icons\spell_nature_cyclone]],
             2
         },
-        ['Fevered Fatigue']             = {
+        ['Fevered Fatigue']                 = {
             [[Interface\Icons\spell_nature_nullifydisease]],
             3
         },
-        ['Fire Shield II']              = {
+        ['Fire Shield II']                  = {
             [[Interface\Icons\spell_fire_immolation]],
             1
         },
-        ['Flame Spike']                 = {
+        ['Flame Spike']                     = {
             [[Interface\Icons\spell_fire_flamebolt]],
             3
         },
-        ['Flamespit']                   = {
+        ['Flamespit']                       = {
             [[Interface\Icons\spell_fire_selfdestruct]],
             3
         },
-        ['Freeze Solid']                = {
+        ['Freeze Solid']                    = {
             [[Interface\Icons\spell_frost_glacier]],
             2.5
         },
-        ['Furbolg Form']                = {
+        ['Furbolg Form']                    = {
             [[Interface\Icons\Inv_misc_monsterclaw_04]],
-            2
+            2,
+            nil,
+            nil,
+            nil,
+            true
         },
-        ['Diseased Slime']              = {
+        ['Diseased Slime']                  = {
             [[Interface\Icons\spell_shadow_creepingplague]],
-            2
+            2,
+            nil,
+            nil,
+            nil,
+            true
         },
-        ['Disenchant']                  = {
+        ['Disenchant']                      = {
             [[Interface\Icons\Inv_Enchant_Disenchant]],
             3
         },
-        ['Drink Minor Potion']          = {
+        ['Drink Minor Potion']              = {
             [[Interface\Icons\Spell_holy_heal]],
             3
         },
-        ['Dynamite']                    = {
+        ['Dynamite']                        = {
             [[Interface\Icons\spell_fire_selfdestruct]],
             1
         },
-        ['Earthgrab Totem']             = {
+        ['Earthgrab Totem']                 = {
             [[Interface\Icons\spell_nature_naturetouchdecay]], 
             .5
         },
-        ['Exploding Shot']              = {
+        ['Exploding Shot']                  = {
             [[Interface\Icons\spell_fire_fireball02]],
             1
         },
-        ['Icicle']                      = {
+        ['Icicle']                          = {
             [[Interface\Icons\spell_frost_frostbolt02]],
             1.5
         },
-        ['Ink Spray']                   = {
+        ['Ink Spray']                       = {
             [[Interface\Icons\spell_nature_sleep]],
-            1
+            1,
+            nil,
+            nil,
+            nil,
+            true
         },
-        ['Healing Ward']                = {
+        ['Healing Ward']                    = {
             [[Interface\Icons\spell_holy_layonhands]],
             2
         },
-        ['Healing Wave']                = {
+        ['Healing Wave']                    = {
             [[Interface\Icons\Spell_nature_healingwavelesser]],
             3
         },
-        ['Holy Smite']                  = {
+        ['Holy Smite']                      = {
             [[Interface\Icons\Spell_holy_holysmite]],
             2.5
         },
-        ['Lightning Blast']             = {
+        ['Lightning Blast']                 = {
             [[Interface\Icons\spell_nature_lightning]],
             3.2
         },
-        ['Lizard Bolt']                 = {
+        ['Lightning Cloud']                 = {
+            [[Interface\Icons\spell_nature_callstorm]],
+            3
+        },
+        ['Lizard Bolt']                     = {
             [[Interface\Icons\spell_nature_lightning]],
             2
         },
-        ['Plague Cloud']                = {
+        ['Plague Cloud']                    = {
             [[Interface\Icons\spell_shadow_callofbone]],
             2
         },
-        ['Plague Mind']                 = {
+        ['Plague Mind']                     = {
             [[Interface\Icons\spell_shadow_callofbone]],
             4
         },
-        ['Poisoned Shot']               = {
+        ['Poisoned Shot']                   = {
             [[Interface\Icons\ability_poisons]],
             2
         },
-        ['Quick Flame Ward']            = {
+        ['Quick Flame Ward']                = {
             [[Interface\Icons\spell_fire_sealoffire]],
             1.5
         },
-        ['Shrink']                      = {
+        ['Shrink']                          = {
             [[Interface\Icons\spell_shadow_antishadow]],
             3
         },
-        ['Silithid Pox']                = {
+        ['Silithid Pox']                    = {
             [[Interface\Icons\spell_nature_nullifydisease]],
             2
         },
-        ['Slowing Poison']              = {
+        ['Slowing Poison']                  = {
             [[Interface\Icons\spell_nature_slowpoison]],
             1
         },
-        ['Torch Toss']                  = {
+        ['Torch Toss']                      = {
             [[Interface\Icons\spell_fire_fireball02]],
             3
         },
-        ['Toxic Spit']                  = {
+        ['Toxic Spit']                      = {
             [[Interface\Icons\spell_nature_corrosivebreath]],
             2.5
         },
-        ['Trelane\'s Freezing Touch']   = {
+        ['Trelane\'s Freezing Touch']       = {
             [[Interface\Icons\spell_shadow_unsummonbuilding]],
             3
         },
-        ['Wandering Plague']            = {
+        ['Wandering Plague']                = {
             [[Interface\Icons\spell_shadow_callofbone]],
             2
         },
-        ['Wither Touch']                = {
+        ['Wither Touch']                    = {
             [[Interface\Icons\spell_nature_drowsy]],
             2
         },
-            -- ahn'qiraj
-        ['Explode']                   = {
+
+            -- ahn'qiraj 
+        ['Explode']                         = {
             [[Interface\Icons\Spell_fire_selfdestruct]],
             6
         },
+        ['Eye Beam']                         = {
+            [[Interface\Icons\Spell_nature_callstorm]],
+            2
+        }, 
+
             -- blackrock spire
-        ['Flame Buffet']              = {
+        ['Flame Buffet']                    = {
             [[Interface\Icons\Spell_fire_selfdestruct]],
             6
         },
+
             -- blackwing lair
-        ['Shadow Flame']              = {
+        ['Shadow Flame']                    = {
             [[Interface\Icons\Spell_fire_incinerate]],
             2
         },
-        ['Wing Buffet']               = {
+        ['Wing Buffet']                     = {
             [[Interface\Icons\Inv_misc_monsterscales_14]],
             1
         },
-        ['Bellowing Roar']            = {
+        ['Bellowing Roar']                  = {
             [[Interface\Icons\Spell_fire_fire]],
             1.75
         },
+
             -- molten core
-        ['Dark Mending']              = {
+        ['Dark Mending']                    = {
             [[Interface\Icons\Spell_shadow_chilltouch]],
             2
         },
-        ['Dominate Mind']             = {
+        ['Dominate Mind']                   = {
             [[Interface\Icons\Spell_shadow_shadowworddominate]],
             2
         },
-        ['Elemental Fire']            = {
+        ['Elemental Fire']                  = {
             [[Interface\Icons\Spell_fire_fireball02]],
             .5
         },
-        ['Magma Blast']               = {
+        ['Magma Blast']                     = {
             [[Interface\Icons\Spell_fire_fireblast]],
             1
         },
-        ['Summon Ragnaros']           = {
+        ['Summon Ragnaros']                 = {
             [[Interface\Icons\Spell_fire_lavaspawn]],
             10
         },
+
             -- onyxia
-        ['Breath']                    = {
+        ['Breath']                          = {
             [[Interface\Icons\Spell_fire_fire]],
             8
         },
+
+            -- zul'gurub
+        ['Unstable Concoction']             = {
+            [[Interface\Icons\Spell_fire_incinerate]],
+            3
+        },
+
             -- dire maul
-        ['Arcane Bolt']               = {
+        ['Arcane Bolt']                     = {
             [[Interface\Icons\Spell_arcane_starfire]],
             1
         },
+
             -- stratholme
-        ['Banshee Wail']              = {
+        ['Banshee Wail']                    = {
             [[Interface\Icons\Spell_shadow_shadowbolt]],
             1.5
         },
-        ['Venom Spit']                = {
+        ['Venom Spit']                      = {
             [[Interface\Icons\Spell_nature_corrosivebreath]],
             2.5
         },
+
             -- global
-        ['Dark Mending']              = {
+        ['Dark Mending']                    = {
             [[Interface\Icons\Spell_shadow_chilltouch]], 
             2
         },
-        ['Hearthstone']               = {
+        ['Hearthstone']                     = {
             [[Interface\Icons\INV_Misc_Rune_01]], 
             10
         },
-        ['Magic Dust']                = {
+        ['Magic Dust']                      = {
             [[Interface\Icons\Inv_misc_dust_02]],
             1.5
         },
-        ['Reckless Charge']           = {
+        ['Reckless Charge']                 = {
             [[Interface\Icons\Spell_nature_astralrecal]],
             .1
         },
-        ['Sleep']                     = {
+        ['Sleep']                           = {
             [[Interface\Icons\Spell_nature_sleep]],
             1.5
         },
-        ['War Stomp']                 = {
+        ['War Stomp']                       = {
             [[Interface\Icons\Ability_warstomp]],
             .5
         },
+
+            -- alchemy
+        ['Greater Healing Potion']          = {
+            [[Interface\Icons\Inv_potion_52]],
+            3
+        },
+        ['Greater Fire Protection Potion']  = {
+            [[Interface\Icons\Inv_potion_24]], 
+            3
+        },
+        ['Mageblood Potion']                = {
+            [[Interface\Icons\inv_potion_45]],
+            3
+        },
+        ['Major Healing Potion']            = {
+            [[Interface\Icons\Inv_potion_54]],
+            3
+        },
+        ['Major Mana Potion']               = {
+            [[Interface\Icons\Inv_potion_76]],
+            3
+        },
+        ['Mana Potion']                     = {
+            [[Interface\Icons\Inv_potion_72]],
+            3
+        },
+        ['Swiftness Potion']                = {
+            [[Interface\Icons\Inv_potion_95]],
+            3
+        },
+        ['Transmute: Arcanite']             = {
+            [[Interface\Icons\Inv_misc_stonetablet_05]],
+            25
+        },
+
+            -- blacksmith      
+        ['Rough Sharpening Stone']          = {
+            [[Interface\Icons\inv_stone_sharpeningstone_01]], 
+            5.125
+        },
+        ['Rough Weightstone']               = {
+            [[Interface\Icons\inv_stone_weightstone_01]],
+            5.125
+        },
+        ['Coarse Sharpening Stone']         = {
+            [[Interface\Icons\inv_stone_sharpeningstone_02]], 
+            5.125
+        },
+        ['Coarse Weightstone']              = {
+            [[Interface\Icons\inv_stone_weightstone_02]],
+            5.125
+        },
+        ['Heavy Sharpening Stone']          = {
+            [[Interface\Icons\inv_stone_sharpeningstone_03]], 
+            5.125
+        },
+        ['Heavy Weightstone']               = {
+            [[Interface\Icons\inv_stone_weightstone_03]],
+            5.125
+        },
+        ['Solid Sharpening Stone']          = {
+            [[Interface\Icons\inv_stone_sharpeningstone_04]], 
+            5.125
+        },
+        ['Solid Weightstone']               = {
+            [[Interface\Icons\inv_stone_weightstone_04]],
+            5.125
+        },
+        ['Dense Sharpening Stone']          = {
+            [[Interface\Icons\inv_stone_sharpeningstone_05]], 
+            8
+        },
+        ['Dense Weightstone']               = {
+            [[Interface\Icons\inv_stone_weightstone_05]],
+            8
+        },
+
+            -- cooking
+        ['Smoked Sagefish']                 = {
+            [[Interface\Icons\Inv_misc_fish_20]],
+            3
+        },
+        ['Savory Deviate Delight']          = {
+            [[Interface\Icons\Inv_misc_monsterhead_04]],
+            3
+        },
+        ['Thistle Tea']                     = {
+            [[Interface\Icons\inv_drink_milk_05]],
+            3
+        },
+        
+            -- enchanting
+        ['Enchant Chest - Minor Mana']      = {
+            [[Interface\Icons\Ability_warstomp]],
+            5
+        },
+        
             -- engineering
-        ['Rough Copper Bomb']         = {
+        ['Arclight Spanner']                = {
+            [[Interface\Icons\inv_misc_wrench_01]],
+            8
+        },
+        ['Copper Modulator']                = {
+            [[Interface\Icons\inv_gizmo_03]],
+            5.125
+        },
+        ['Handful of Copper Bolts']         = {
+            [[Interface\Icons\inv_misc_gear_06]],
+            1.5
+        },
+        ['Enchanted Leather']               = {
+            [[Interface\Icons\inv_misc_rune_05]],
+            12.5
+        },
+        ['Rough Blasting Powder']           = {
+            [[Interface\Icons\inv_misc_dust_01]],
+            5.125
+        },
+        ['Coarse Blasting Powder']          = {
+            [[Interface\Icons\inv_misc_dust_02]],
+            5.125
+        },
+        ['Heavy Blasting Powder']           = {
+            [[Interface\Icons\inv_misc_dust_06]],
+            5.125
+        },
+        ['Solid Blasting Powder']           = {
+            [[Interface\Icons\inv_misc_powder_black]],
+            8
+        },
+        ['Dense Blasting Powder']           = {
+            [[Interface\Icons\inv_misc_ammo_gunpowder_01]],
+            8
+        },           
+           
+
+            -- engineering
+        ['Rough Copper Bomb']               = {
             [[Interface\Icons\Inv_misc_bomb_09]],
             1
         },
-        ['Large Copper Bomb']         = {
+        ['Large Copper Bomb']               = {
             [[Interface\Icons\Inv_misc_bomb_01]],
             1
         },
-        ['Small Bronze Bomb']         = {
+        ['Small Bronze Bomb']               = {
             [[Interface\Icons\Inv_misc_bomb_09]],
             1
         },
-        ['Big Bronze Bomb']           = {
+        ['Big Bronze Bomb']                 = {
             [[Interface\Icons\Inv_misc_bomb_05]],
             1
         },
-        ['Iron Grenade']              = {
+        ['Iron Grenade']                    = {
             [[Interface\Icons\Inv_misc_bomb_08]],
             1
         },
-        ['Big Iron Bomb']             = {
+        ['Big Iron Bomb']                   = {
             [[Interface\Icons\Inv_misc_bomb_01]], 
             1
         },
-        ['Mithril Frag Bomb']         = {
+        ['Mithril Frag Bomb']               = {
             [[Interface\Icons\Inv_misc_bomb_02]],
             1
         },
-        ['Hi-Explosive Bomb']         = {
+        ['Hi-Explosive Bomb']               = {
             [[Interface\Icons\Inv_misc_bomb_07]],
             1
         },
-        ['Thorium Grenade']           = {
+        ['Thorium Grenade']                 = {
             [[Interface\Icons\Inv_misc_bomb_08]], 
             1
         },
-        ['Dark Iron Bomb']            = {
+        ['Dark Iron Bomb']                  = {
             [[Interface\Icons\Inv_misc_bomb_05]],
             1
         },
-        ['Arcane Bomb']               = {
+        ['Arcane Bomb']                     = {
             [[Interface\Icons\Spell_shadow_mindbomb]],
             1
         },
+
             -- first aid
-        ['Linen Bandage']             = {[[Interface\Icons\Inv_misc_bandage_15]], 3},
-        ['Heavy Linen Bandage']       = {[[Interface\Icons\Inv_misc_bandage_18]], 3},
-        ['Wool Bandage']              = {[[Interface\Icons\Inv_misc_bandage_14]], 3},
-        ['Heavy Wool Bandage']        = {[[Interface\Icons\Inv_misc_bandage_17]], 3},
-        ['Silk Bandage']              = {[[Interface\Icons\Inv_misc_bandage_01]], 3},
-        ['Heavy Silk Bandage']        = {[[Interface\Icons\Inv_misc_bandage_02]], 3},
-        ['Mageweave Bandage']         = {[[Interface\Icons\Inv_misc_bandage_19]], 3},
-        ['Heavy Mageweave Bandage']   = {[[Interface\Icons\Inv_misc_bandage_20]], 3},
-        ['Runecloth Bandage']         = {[[Interface\Icons\Inv_misc_bandage_11]], 3},
-        ['Heavy Runecloth Bandage']   = {[[Interface\Icons\Inv_misc_bandage_12]], 3},
+        ['Linen Bandage']                   = {
+            [[Interface\Icons\Inv_misc_bandage_15]], 
+            3
+        },
+        ['Heavy Linen Bandage']             = {
+            [[Interface\Icons\Inv_misc_bandage_18]],
+            3
+        },
+        ['Wool Bandage']                    = {
+            [[Interface\Icons\Inv_misc_bandage_14]],
+            3
+        },
+        ['Heavy Wool Bandage']              = {
+            [[Interface\Icons\Inv_misc_bandage_17]],
+            3
+        },
+        ['Silk Bandage']                    = {
+            [[Interface\Icons\Inv_misc_bandage_01]],
+            3
+        },
+        ['Heavy Silk Bandage']              = {
+            [[Interface\Icons\Inv_misc_bandage_02]],
+            3
+        },
+        ['Mageweave Bandage']               = {
+            [[Interface\Icons\Inv_misc_bandage_19]],
+            3
+        },
+        ['Heavy Mageweave Bandage']         = {
+            [[Interface\Icons\Inv_misc_bandage_20]],
+            3
+        },
+        ['Runecloth Bandage']               = {
+            [[Interface\Icons\Inv_misc_bandage_11]],
+            3
+        },
+        ['Heavy Runecloth Bandage']         = {
+            [[Interface\Icons\Inv_misc_bandage_12]],
+            3
+        },
+
+            -- fishing
+        ['Fishing']                         = {
+            [[Interface\Icons\Trade_Fishing]], 
+            30
+        },
+
+            -- leatherworking
+        ['Skinning']                        = {
+            [[Interface\Icons\inv_misc_pelt_wolf_01]],
+            3
+        },
+        
+            -- mining
+        ['Smelt Copper']                    = {
+            [[Interface\Icons\Inv_ingot_02]],
+            3
+        },
+        ['Copper Bar']                      = {
+            [[Interface\Icons\Inv_ingot_02]],
+            3
+        },
+        ['Smelt Tin']                       = {
+            [[Interface\Icons\Inv_ingot_05]],
+            3
+        },
+        ['Smelt Bronze']                    = {
+            [[Interface\Icons\Inv_ingot_02]],
+            3
+        },      
+        ['Smelt Silver']                    = {
+            [[Interface\Icons\Inv_ingot_01]],
+            3
+        },  
+        ['Smelt Gold']                      = {
+            [[Interface\Icons\Inv_ingot_03]],
+            3
+        },
+        ['Smelt Iron']                      = {
+            [[Interface\Icons\Inv_ingot_04]],
+            3
+        },
+        ['Smelt Mithril']                   = {
+            [[Interface\Icons\Inv_ingot_06]],
+            3
+        },
+        ['Smelt Truesilver']                = {
+            [[Interface\Icons\Inv_ingot_08]],
+            3
+        },
+        ['Smelt Thorium']                   = {
+            [[Interface\Icons\Inv_ingot_07]],
+            3
+        },  
+        ['Thorium Bar']                     = {
+            [[Interface\Icons\Inv_ingot_07]],
+            3
+        },
+
+            -- tailoring
+        ['Bolt of Linen Cloth']             = {
+            [[Interface\Icons\inv_fabric_linen_02]],
+            3
+        },
+        ['Bolt of Woolen Cloth']            = {
+            [[Interface\Icons\inv_fabric_wool_03]],
+            5.125
+        },
+        ['Bolt of Silk Cloth']              = {
+            [[Interface\Icons\inv_fabric_silk_03]],
+            5.125
+        },
+        ['Bolt of Mageweave']               = {
+            [[Interface\Icons\inv_fabric_mageweave_03]],
+            8
+        },
+        ['Bolt of Runecloth']               = {
+            [[Interface\Icons\inv_fabric_purplefire_02]], 
+            12.5
+        },            
+
             -- druid
-        ['Entangling Roots']          = {
+        ['Entangling Roots']                = {
             [[Interface\Icons\Spell_nature_stranglevines]],
-            1.5
+            1.5,
+            nil,
+            'DRUID',
+            'nature'
         },
-        ['Healing Touch']             = {
+        ['Healing Touch']                   = {
             [[Interface\Icons\Spell_nature_healingtouch]],
-            3
+            3,
+            nil,
+            'DRUID',
+            'nature'
         },
-        ['Hibernate']                 = {
+        ['Hibernate']                       = {
             [[Interface\Icons\Spell_nature_sleep]],
-            1.5
+            1.5,
+            nil,
+            'DRUID',
+            'nature'
         },
-        ['Rebirth']                   = {
+        ['Rebirth']                         = {
             [[Interface\Icons\Spell_nature_reincarnation]],
-            2
+            2,
+            nil,
+            'DRUID'
         },
-        ['Regrowth']                  = {
+        ['Regrowth']                        = {
             [[Interface\Icons\Spell_nature_resistnature]],
-            2
+            2,
+            nil,
+            'DRUID'
         },
-        ['Soothe Animal']             = {
+        ['Soothe Animal']                   = {
             [[Interface\Icons\Ability_hunter_beastsoothe]],
-            1.5
+            1.5,
+            nil,
+            'DRUID'
         },
-        ['Starfire']                  = {
+        ['Starfire']                        = {
             [[Interface\Icons\Spell_arcane_starfire]],
-            3
+            3,
+            nil,
+            'DRUID',
+            'nature'
         },
-        ['Teleport: Moonglade']       = {
+        ['Teleport: Moonglade']             = {
             [[Interface\Icons\Spell_arcane_teleportmoonglade]],
-            10
+            10,
+            nil,
+            'DRUID'
         },
-        ['Wrath']                     = {
+        ['Wrath']                           = {
             [[Interface\Icons\Spell_nature_abolishmagic]],
-            1.5
+            1.5,
+            nil,
+            'DRUID',
+            'nature'
         },
+
             -- hunter
-        ['Aimed Shot']                = {
+        ['Aimed Shot']                      = {
             [[Interface\Icons\Inv_spear_07]], 
-            2.5
+            2.5,
+            nil,
+            'HUNTER',
+            'physical',
+            true
         },
-        ['Dismiss Pet']               = {
+        ['Dismiss Pet']                     = {
             [[Interface\Icons\Spell_nature_spiritwolf]], 
-            5
+            5,
+            nil,
+            'HUNTER'
         },
-        ['Eyes of the Beast']         = {
+        ['Eyes of the Beast']               = {
             [[Interface\Icons\Ability_eyeoftheowl]],
-            2
+            2,
+            nil,
+            'HUNTER'
         },
-        ['Revive Pet']                = {
+        ['Multishot']                       = {
+            [[Interface\Icons\ability_upgrademoonglaive]],
+            .5,
+            nil,
+            'HUNTER',
+            'physical',
+            true
+        },
+        ['Revive Pet']                      = {
             [[Interface\Icons\Ability_hunter_beastsoothe]],
-            10
+            10,
+            nil,
+            'HUNTER'
         },
-        ['Scare Beast']               = {
+        ['Scare Beast']                     = {
             [[Interface\Icons\Ability_druid_cower]],
-            1.5
+            1.5,
+            nil,
+            'HUNTER',
+            'physical'
         },
+
             -- mage
-        ['Conjure Food']              = {
+        ['Conjure Food']                    = {
             [[Interface\Icons\Inv_misc_food_73cinnamonroll]],
-            3
+            3,
+            nil,
+            'MAGE'
         },
-        ['Conjure Water']             = {
+        ['Conjure Water']                   = {
             [[Interface\Icons\Inv_drink_18]],
-            3
+            3,
+            nil,
+            'MAGE'
         },
-        ['Conjure Mana Agate']        = {
+        ['Conjure Mana Agate']              = {
             [[Interface\Icons\Inv_misc_gem_emerald_01]],
-            3
+            3,
+            nil,
+            'MAGE'
         },
-        ['Conjure Mana Citrine']      = {
+        ['Conjure Mana Citrine']            = {
             [[Interface\Icons\Inv_misc_gem_opal_01]],
-            3
+            3,
+            nil,
+            'MAGE'
         },
-        ['Conjure Mana Jade']         = {
+        ['Conjure Mana Jade']               = {
             [[Interface\Icons\Inv_misc_gem_emerald_02]],
-            3
+            3,
+            nil,
+            'MAGE'
         },
-        ['Conjure Mana Ruby']         = {
+        ['Conjure Mana Ruby']               = {
             [[Interface\Icons\Inv_misc_gem_ruby_01]],
-            3
+            3,
+            nil,
+            'MAGE'
         },
-        ['Fireball']                  = {
+        ['Fireball']                        = {
             [[Interface\Icons\Spell_fire_flamebolt]],
-            3
+            3,
+            nil,
+            'MAGE',
+            'fire'
         },
-        ['Frostbolt']                 = {
+        ['Frostbolt']                       = {
             [[Interface\Icons\Spell_frost_frostbolt02]],
-            3
+            3,
+            nil,
+            'MAGE',
+            'frost'
         },
-        ['Flamestrike']               = {
+        ['Flamestrike']                     = {
             [[Interface\Icons\Spell_fire_selfdestruct]],
-            3
+            3,
+            nil,
+            'MAGE',
+            'fire'
         },
-        ['Polymorph']                 = {
+        ['Polymorph']                       = {
             [[Interface\Icons\Spell_nature_polymorph]],
-            1.5
+            1.5,
+            nil,
+            'MAGE',
+            'arcane'
         },
-        ['Polymorph: Pig']            = {
+        ['Polymorph: Pig']                  = {
             [[Interface\Icons\Spell_magic_polymorphpig]],
-            1.5
+            1.5,
+            nil,
+            'MAGE',
+            'arcane'
         },
-        ['Polymorph: Turtle']         = {
+        ['Polymorph: Turtle']               = {
             [[Interface\Icons\Ability_hunter_pet_turtle]],
-            1.5
+            1.5,
+            nil,
+            'MAGE',
+            'arcane'
         },
-        ['Portal: Darnassus']         = {
+        ['Portal: Darnassus']               = {
             [[Interface\Icons\Spell_arcane_portaldarnassus]],
-            10
+            10,
+            nil,
+            'MAGE'
         },
-        ['Portal: Thunder Bluff']     = {
+        ['Portal: Thunder Bluff']           = {
             [[Interface\Icons\Spell_arcane_portalthunderbluff]],
-            10
+            10,
+            nil,
+            'MAGE'
         },
-        ['Portal: Ironforge']         = {
+        ['Portal: Ironforge']               = {
             [[Interface\Icons\Spell_arcane_portalironforge]], 
-            10
+            10,
+            nil,
+            'MAGE'
         },
-        ['Portal: Orgrimmar']         = {
+        ['Portal: Orgrimmar']               = {
             [[Interface\Icons\Spell_arcane_portalorgrimmar]],
-            10
+            10,
+            nil,
+            'MAGE'
         },
-        ['Portal: Stormwind']         = {
+        ['Portal: Stormwind']               = {
             [[Interface\Icons\Spell_arcane_portalstormwind]],
-            10
+            10,
+            nil,
+            'MAGE'
         },
-        ['Portal: Undercity']         = {
+        ['Portal: Undercity']               = {
             [[Interface\Icons\Spell_arcane_portalundercity]],
-            10
+            10,
+            nil,
+            'MAGE'
         },
-        ['Teleport: Darnassus']       = {
+        ['Teleport: Darnassus']             = {
             [[Interface\Icons\Spell_arcane_teleportdarnassus]],
-            10
+            10,
+            nil,
+            'MAGE'
         },
-        ['Teleport: Thunder Bluff']   = {
+        ['Teleport: Thunder Bluff']         = {
             [[Interface\Icons\Spell_arcane_teleportthunderbluff]],
-            10
+            10,
+            nil,
+            'MAGE'
         },
-        ['Teleport: Ironforge']       = {
+        ['Teleport: Ironforge']             = {
             [[Interface\Icons\Spell_arcane_portalironforge]],
-            10
+            10,
+            nil,
+            'MAGE'
         },
-        ['Teleport: Orgrimmar']       = {
+        ['Teleport: Orgrimmar']             = {
             [[Interface\Icons\Spell_arcane_teleportorgrimmar]],
-            10
+            10,
+            nil,
+            'MAGE'
         },
-        ['Teleport: Stormwind']       = {
+        ['Teleport: Stormwind']             = {
             [[Interface\Icons\Spell_arcane_teleportstormwind]],
-            10
+            10,
+            nil,
+            'MAGE'
         },
-        ['Teleport: Undercity']       = {
+        ['Teleport: Undercity']             = {
             [[Interface\Icons\Spell_arcane_teleportundercity]],
-            10
+            10,
+            nil,
+            'MAGE'
         },
-        ['Pyroblast']                 = {
+        ['Pyroblast']                       = {
             [[Interface\Icons\Spell_fire_fireball02]],
-            6
+            6,
+            nil,
+            'MAGE',
+            'fire'
         },
-        ['Scorch']                    = {
+        ['Scorch']                          = {
             [[Interface\Icons\Spell_fire_soulburn]],
-            1.5
+            1.5,
+            nil,
+            'MAGE',
+            'fire'
         },
+
             -- paladin
-        ['Hammer of Wrath']           = {
+        ['Hammer of Wrath']                 = {
             [[Interface\Icons\Ability_ThunderClap]],
+            1,
+            nil,
+            'PALADIN'
+        },
+        ['Holy Light']                      = {
+            [[Interface\Icons\Spell_holy_holybolt]],
+            2.5,
+            nil,
+            'PALADIN'
+        },
+        ['Holy Wrath']                      = {
+            [[Interface\Icons\Spell_holy_weaponmastery]],
+            2,
+            nil,
+            'PALADIN'
+        },
+        ['Flash of Light']                  = {
+            [[Interface\Icons\Spell_holy_flashheal]],
+            1.5,
+            nil,
+            'PALADIN'
+        },
+        ['Redemption']                      = {
+            [[Interface\Icons\Spell_holy_resurrection]],
+            10,
+            nil,
+            'PALADIN'
+        },
+        ['Summon Warhorse']                 = {
+            [[Interface\Icons\Spell_nature_swiftness]],
+            3,
+            nil,
+            'PALADIN'
+        },
+        ['Summon Charger']                  = {
+            [[Interface\Icons\Ability_mount_charger]],
+            3,
+            nil,
+            'PALADIN'
+        },
+        ['Turn Undead']                     = {
+            [[Interface\Icons\Spell_holy_turnundead]],
+            1.5,
+            nil,
+            'PALADIN'
+        },
+
+            -- priest
+        ['Flash Heal']                      = {
+            [[Interface\Icons\Spell_holy_flashheal]],
+            1.5,
+            nil,
+            'PRIEST'
+        },
+        ['Greater Heal']                    = {
+            [[Interface\Icons\Spell_holy_greaterheal]],
+            2.5,
+            nil,
+            'PRIEST'
+        },
+        ['Heal']                            = {
+            [[Interface\Icons\Spell_holy_heal]], 
+            2.5,
+            nil,
+            'PRIEST'
+        },
+        ['Holy Fire']                       = {
+            [[Interface\Icons\Spell_holy_searinglight]],
+            3.5,
+            nil,
+            'PRIEST',
+            'holy'
+        },
+        ['Lesser Heal']                     = {
+            [[Interface\Icons\Spell_holy_lesserheal]],
+            1.5,
+            nil,
+            'PRIEST'
+        },
+        ['Mana Burn']                       = {
+            [[Interface\Icons\Spell_shadow_manaburn]],
+            3,
+            nil,
+            'PRIEST',
+            'shadow'
+        },
+        ['Mind Blast']                      = {
+            [[Interface\Icons\Spell_shadow_unholyfrenzy]],
+            1.5,
+            nil,
+            'PRIEST',
+            'shadow'
+        },
+        ['Mind Control']                    = {
+            [[Interface\Icons\Spell_shadow_shadowworddominate]],
+            3,
+            nil,
+            'PRIEST',
+            'shadow'
+        },
+        ['Prayer of Healing']               = {
+            [[Interface\Icons\Spell_holy_prayerofhealing02]],
+            3,
+            nil,
+            'PRIEST'
+        },
+        ['Resurrection']                    = {
+            [[Interface\Icons\Spell_holy_resurrection]],
+            10,
+            nil,
+            'PRIEST'
+        },
+        ['Shackle Undead']                  = {
+            [[Interface\Icons\Spell_nature_slow]],
+            1.5,
+            nil,
+            'PRIEST'
+        },
+        ['Smite']                           = {
+            [[Interface\Icons\Spell_holy_holysmite]],
+            2.5,
+            nil,
+            'PRIEST',
+            'Holy'
+        },
+
+            -- rogue
+        ['Disarm Trap']                     = {
+            [[Interface\Icons\Spell_shadow_grimward]],
+            5,
+            nil,
+            'ROGUE'
+        },
+        ['Mind-numbing Poison']             = {
+            [[Interface\Icons\Spell_nature_nullifydisease]],
+            3,
+            nil,
+            'ROGUE'
+        },
+        ['Mind-numbing Poison II']          = {
+            [[Interface\Icons\Spell_nature_nullifydisease]],
+            3,
+            nil,
+            'ROGUE'
+        },
+        ['Mind-numbing Poison III']         = {
+            [[Interface\Icons\Spell_nature_nullifydisease]],
+            3,
+            nil,
+            'ROGUE'
+        },
+        ['Instant Poison']                  = {
+            [[Interface\Icons\Spell_nature_corrosivebreath]],
+            3,
+            nil,
+            'ROGUE'
+        },
+        ['Instant Poison II']               = {
+            [[Interface\Icons\Spell_nature_corrosivebreath]],
+            3,
+            nil,
+            'ROGUE'
+        },
+        ['Instant Poison III']              = {
+            [[Interface\Icons\Spell_nature_corrosivebreath]], 
+            3,
+            nil,
+            'ROGUE'
+        },
+        ['Instant Poison IV']               = {
+            [[Interface\Icons\Spell_nature_corrosivebreath]],
+            3,
+            nil,
+            'ROGUE'
+        },
+        ['Instant Poison V']                = {
+            [[Interface\Icons\Spell_nature_corrosivebreath]], 
+            3,
+            nil,
+            'ROGUE'
+        },
+        ['Instant Poison VI']               = {
+            [[Interface\Icons\Spell_nature_corrosivebreath]], 
+            3,
+            nil,
+            'ROGUE'
+        },
+        ['Deadly Poison']                   = {
+            [[Interface\Icons\Ability_rogue_dualweild]], 
+            3,
+            nil,
+            'ROGUE'
+        },
+        ['Deadly Poison II']                = {
+            [[Interface\Icons\Ability_rogue_dualweild]], 
+            3,
+            nil,
+            'ROGUE'
+        },
+        ['Deadly Poison III']               = {
+            [[Interface\Icons\Ability_rogue_dualweild]], 
+            3,
+            nil,
+            'ROGUE'
+        },
+        ['Deadly Poison IV']                = {
+            [[Interface\Icons\Ability_rogue_dualweild]], 
+            3,
+            nil,
+            'ROGUE'
+        },
+        ['Deadly Poison V']                 = {
+            [[Interface\Icons\Ability_rogue_dualweild]], 
+            3,
+            nil,
+            'ROGUE'
+        },
+        ['Crippling Poison']                = {
+            [[Interface\Icons\Ability_poisonsting]], 
+            3,
+            nil,
+            'ROGUE'
+        },
+        ['Pick Lock']                       = {
+            [[Interface\Icons\Spell_nature_moonkey]], 
+            5,
+            nil,
+            'ROGUE'
+        },
+
+            -- shaman
+        ['Ancestral Spirit']                = {
+            [[Interface\Icons\Spell_nature_regenerate]], 
+            10,
+            nil,
+            'SHAMAN'
+        },
+        ['Astral Recall']                   = {
+            [[Interface\Icons\Spell_nature_astralrecal]], 
+            10,
+            nil,
+            'SHAMAN'
+        },
+        ['Chain Heal']                      = {
+            [[Interface\Icons\Spell_nature_healingwavegreater]], 
+            2.5,
+            nil,
+            'SHAMAN'
+        },
+        ['Chain Lightning']                 = {
+            [[Interface\Icons\Spell_nature_chainlightning]], 
+            1.5,
+            nil,
+            'SHAMAN',
+            'nature'
+        },
+        ['Far Sight']                       = {
+            [[Interface\Icons\Spell_nature_farsight]], 
+            2,
+            nil,
+            'SHAMAN'
+        },
+        ['Ghost Wolf']                      = {
+            [[Interface\Icons\Spell_nature_spiritwolf]], 
+            3,
+            nil,
+            'SHAMAN'
+        },
+        ['Healing Wave']                    = {
+            [[Interface\Icons\Spell_nature_healingwavegreater]], 
+            2.5,
+            nil,
+            'SHAMAN'
+        },
+        ['Lesser Healing Wave']             = {
+            [[Interface\Icons\Spell_nature_healingwavelesser]], 
+            1.5,
+            nil,
+            'SHAMAN'
+        },
+        ['Lightning Bolt']                  = {
+            [[Interface\Icons\Spell_nature_lightning]], 
+            3,
+            nil,
+            'SHAMAN',
+            'nature'
+        },
+
+            -- warlock
+        ['Banish']                          = {
+            [[Interface\Icons\Spell_shadow_cripple]], 
+            1.5,
+            nil,
+            'WARLOCK'
+        },
+        ['Create Firestone']                = {
+            [[Interface\Icons\Inv_misc_gem_bloodstone_02]], 
+            3,
+            nil,
+            'WARLOCK'
+        },
+        ['Create Healthstone']              = {
+            [[Interface\Icons\Inv_stone_04]], 
+            3,
+            nil,
+            'WARLOCK'
+        },
+        ['Create Spellstone']               = {
+            [[Interface\Icons\Inv_misc_gem_sapphire_01]], 
+            5,
+            nil,
+            'WARLOCK'
+        },
+        ['Create Soulstone']                = {
+            [[Interface\Icons\Spell_shadow_soulgem]], 
+            3,
+            nil,
+            'WARLOCK'
+        },
+        ['Enslave Demon']                   = {
+            [[Interface\Icons\Spell_shadow_enslavedemon]], 
+            3,
+            nil,
+            'WARLOCK'
+        },
+        ['Fear']                            = {
+            [[Interface\Icons\Spell_shadow_possession]], 
+            1.5,
+            nil,
+            'WARLOCK',
+            'shadow'
+        },
+        ['Firebolt']                        = {
+            [[Interface\Icons\Spell_fire_firebolt]], 
+            1.75,
+        },
+        ['Howl of Terror']                  = {
+            [[Interface\Icons\Ability_warlock_howlofterror]], 
+            2,
+            nil,
+            'WARLOCK',
+            'shadow'
+        },
+        ['Immolate']                        = {
+            [[Interface\Icons\Spell_fire_immolation]], 
+            1.5,
+            nil,
+            'WARLOCK',
+            'fire'
+        },
+        ['Inferno']                         = {
+            [[Interface\Icons\Spell_fire_incinerate]], 
+            2,
+            nil,
+            'WARLOCK'
+        },
+        ['Ritual of Doom']                  = {
+            [[Interface\Icons\Spell_shadow_antimagicshell]], 
+            10,
+            nil,
+            'WARLOCK'
+        },
+        ['Ritual of Summoning']             = {
+            [[Interface\Icons\Spell_shadow_twilight]], 
+            5,
+            nil,
+            'WARLOCK'
+        },
+        ['Searing Pain']                    = {
+            [[Interface\Icons\Spell_fire_soulburn]], 
+            1.5,
+            nil,
+            'WARLOCK',
+            'fire'
+        },
+        ['Seduction']                       = {
+            [[Interface\Icons\Spell_shadow_mindsteal]], 
+            1.5,
+            nil,
+            'WARLOCK',
+            'shadow'
+        },
+        ['Shadow Bolt']                     = {
+            [[Interface\Icons\Spell_shadow_shadowbolt]], 
+            2.5,
+            nil,
+            'WARLOCK',
+            'shadow'
+        },
+        ['Soul Fire']                       = {
+            [[Interface\Icons\Spell_fire_fireball02]], 
+            4,
+            nil,
+            'WARLOCK',
+            'fire'
+        },
+        ['Summon Dreadsteed']               = {
+            [[Interface\Icons\Ability_mount_dreadsteed]], 
+            3,
+            nil,
+            'WARLOCK'
+        },
+        ['Summon Felhunter']                = {
+            [[Interface\Icons\Spell_shadow_summonfelhunter]], 
+            6,
+            nil,
+            'WARLOCK'
+        },
+        ['Summon Felsteed']                 = {
+            [[Interface\Icons\Spell_nature_swiftness]], 
+            3,
+            nil,
+            'WARLOCK'
+        },
+        ['Summon Imp']                      = {
+            [[Interface\Icons\Spell_shadow_summonimp]], 
+            6,
+            nil,
+            'WARLOCK'
+        },
+        ['Summon Succubus']                 = {
+            [[Interface\Icons\Spell_shadow_summonsuccubus]], 
+            6,
+            nil,
+            'WARLOCK'
+        },
+        ['Summon Voidwalker']               = {
+            [[Interface\Icons\Spell_shadow_summonvoidwalker]], 
+            6,
+            nil,
+            'WARLOCK'
+        },
+
+            -- warrior
+        ['Slam']                            = {
+            [[Interface\Icons\ability_warrior_decisivestrike]], 
+            1.5,
+            nil,
+            'WARRIOR',
+            'physical',
+            true
+        },
+    }
+
+    MODUI_CHANNELED_HEALS_SPELLCASTS_TO_TRACK = {
+            -- first aid
+        ['First Aid']   = {
+            [[Interface\Icons\Spell_holy_heal]],
+            5.5,
             1
         },
-        ['Holy Light']                = {
-            [[Interface\Icons\Spell_holy_holybolt]],
-            2.5
-        },
-        ['Holy Wrath']                = {
-            [[Interface\Icons\Spell_holy_weaponmastery]],
+            -- druid
+        ['Tranquility'] = {
+            [[Interface\Icons\Spell_nature_tranquility]],
+            9.5,
             2
         },
-        ['Flash of Light']            = {
-            [[Interface\Icons\Spell_holy_flashheal]],
-            1.5
+    }
+
+    MODUI_CHANNELED_SPELLCASTS_TO_TRACK = {
+            -- hunter
+        ['Eagle Eye']         = {
+            [[Interface\Icons\Ability_hunter_eagleeye]], 
+            60
         },
-        ['Redemption']                = {
-            [[Interface\Icons\Spell_holy_resurrection]],
+        ['Eyes of the Beast'] = {
+            [[Interface\Icons\Ability_eyeoftheowl]],
+            60
+        },
+        ['Mend Pet']          = {
+            [[Interface\Icons\Ability_hunter_mendpet]],
             10
         },
-        ['Summon Warhorse']           = {
-            [[Interface\Icons\Spell_nature_swiftness]],
-            3
+
+            -- mage
+        ['Arcane Missile']    = {
+            [[Interface\Icons\Spell_nature_starfall]],
+            2.25
         },
-        ['Summon Charger']            = {
-            [[Interface\Icons\Ability_mount_charger]],
-            3
+        ['Arcane Missiles']   = {
+            [[Interface\Icons\Spell_nature_starfall]],
+            4.25
         },
-        ['Turn Undead']               = {
-            [[Interface\Icons\Spell_holy_turnundead]],
-            1.5
+        ['Blizzard']          = {
+            [[Interface\Icons\Spell_frost_icestorm]],
+            8
         },
+        ['Evocation']         = {
+            [[Interface\Icons\Spell_nature_purge]],
+            8
+        },
+
             -- priest
-        ['Flash Heal']                = {
-            [[Interface\Icons\Spell_holy_flashheal]],
-            1.5
-        },
-        ['Greater Heal']              = {
-            [[Interface\Icons\Spell_holy_greaterheal]],
-            2.5
-        },
-        ['Heal']                      = {
-            [[Interface\Icons\Spell_holy_heal]], 
-            2.5
-        },
-        ['Holy Fire']                 = {
-            [[Interface\Icons\Spell_holy_searinglight]],
-            3.5
-        },
-        ['Mana Burn']                 = {
-            [[Interface\Icons\Spell_shadow_manaburn]],
+        ['Mind Flay']         = {
+            [[Interface\Icons\Spell_shadow_siphonmana]],
             3
         },
-        ['Mind Blast']                = {
-            [[Interface\Icons\Spell_shadow_unholyfrenzy]],
-            1.5
+        ['Mind Vision']       = {
+            [[Interface\Icons\Spell_holy_mindvision]],
+            60
         },
-        ['Mind Control']              = {
-            [[Interface\Icons\Spell_shadow_shadowworddominate]],
-            3
-        },
-        ['Prayer of Healing']         = {
-            [[Interface\Icons\Spell_holy_prayerofhealing02]],
-            3
-        },
-        ['Resurrection']              = {
-            [[Interface\Icons\Spell_holy_resurrection]],
-            10
-        },
-        ['Shackle Undead']            = {
-            [[Interface\Icons\Spell_nature_slow]],
-            1.5
-        },
-        ['Smite']                     = {
-            [[Interface\Icons\Spell_holy_holysmite]],
-            2.5
-        },
-            -- rogue
-        ['Disarm Trap']               = {
-            [[Interface\Icons\Spell_shadow_grimward]],
-            5
-        },
-        ['Mind-numbing Poison']       = {
-            [[Interface\Icons\Spell_nature_nullifydisease]],
-            3
-        },
-        ['Mind-numbing Poison II']    = {
-            [[Interface\Icons\Spell_nature_nullifydisease]],
-            3
-        },
-        ['Mind-numbing Poison III']   = {
-            [[Interface\Icons\Spell_nature_nullifydisease]],
-            3
-        },
-        ['Instant Poison']            = {
-            [[Interface\Icons\Spell_nature_corrosivebreath]],
-            3
-        },
-        ['Instant Poison II']         = {
-            [[Interface\Icons\Spell_nature_corrosivebreath]],
-            3
-        },
-        ['Instant Poison III']        = {
-            [[Interface\Icons\Spell_nature_corrosivebreath]], 
-            3
-        },
-        ['Instant Poison IV']         = {
-            [[Interface\Icons\Spell_nature_corrosivebreath]],
-            3
-        },
-        ['Instant Poison V']          = {
-            [[Interface\Icons\Spell_nature_corrosivebreath]], 
-            3
-        },
-        ['Instant Poison VI']         = {
-            [[Interface\Icons\Spell_nature_corrosivebreath]], 
-            3
-        },
-        ['Deadly Poison']             = {
-            [[Interface\Icons\Ability_rogue_dualweild]], 
-            3
-        },
-        ['Deadly Poison II']          = {
-            [[Interface\Icons\Ability_rogue_dualweild]], 
-            3
-        },
-        ['Deadly Poison III']         = {
-            [[Interface\Icons\Ability_rogue_dualweild]], 
-            3
-        },
-        ['Deadly Poison IV']          = {
-            [[Interface\Icons\Ability_rogue_dualweild]], 
-            3
-        },
-        ['Deadly Poison V']           = {
-            [[Interface\Icons\Ability_rogue_dualweild]], 
-            3
-        },
-        ['Crippling Poison']          = {
-            [[Interface\Icons\Ability_poisonsting]], 
-            3
-        },
-        ['Pick Lock']                 = {
-            [[Interface\Icons\Spell_nature_moonkey]], 
-            5
-        },
-            -- shaman
-        ['Ancestral Spirit']          = {
-            [[Interface\Icons\Spell_nature_regenerate]], 
-            10
-        },
-        ['Astral Recall']             = {
-            [[Interface\Icons\Spell_nature_astralrecal]], 
-            10
-        },
-        ['Chain Heal']                = {
-            [[Interface\Icons\Spell_nature_healingwavegreater]], 
-            2.5
-        },
-        ['Chain Lightning']           = {
-            [[Interface\Icons\Spell_nature_chainlightning]], 
-            1.5
-        },
-        ['Far Sight']                 = {
-            [[Interface\Icons\Spell_nature_farsight]], 
-            2
-        },
-        ['Ghost Wolf']                = {
-            [[Interface\Icons\Spell_nature_spiritwolf]], 
-            3
-        },
-        ['Healing Wave']              = {
-            [[Interface\Icons\Spell_nature_healingwavegreater]], 
-            2.5
-        },
-        ['Lesser Healing Wave']       = {
-            [[Interface\Icons\Spell_nature_healingwavelesser]], 
-            1.5
-        },
-        ['Lightning Bolt']            = {
-            [[Interface\Icons\Spell_nature_lightning]], 
-            3
-        },
+
             -- warlock
-        ['Banish']                    = {
-            [[Interface\Icons\Spell_shadow_cripple]], 
-            1.5
-        },
-        ['Create Firestone']          = {
-            [[Interface\Icons\Inv_misc_gem_bloodstone_02]], 
-            3
-        },
-        ['Create Healthstone']        = {
-            [[Interface\Icons\Inv_stone_04]], 
-            3
-        },
-        ['Create Spellstone']         = {
-            [[Interface\Icons\Inv_misc_gem_sapphire_01]], 
+        ['Drain Life']        = {
+            [[Interface\Icons\Spell_shadow_lifedrain02]],
             5
         },
-        ['Create Soulstone']          = {
-            [[Interface\Icons\Spell_shadow_soulgem]], 
-            3
-        },
-        ['Enslave Demon']             = {
-            [[Interface\Icons\Spell_shadow_enslavedemon]], 
-            3
-        },
-        ['Fear']                      = {
-            [[Interface\Icons\Spell_shadow_possession]], 
-            1.5
-        },
-        ['Howl of Terror']            = {
-            [[Interface\Icons\Ability_warlock_howlofterror]], 
-            2
-        },
-        ['Immolate']                  = {
-            [[Interface\Icons\Spell_fire_immolation]], 
-            1.5
-        },
-        ['Inferno']                   = {
-            [[Interface\Icons\Spell_fire_incinerate]], 
-            2
-        },
-        ['Ritual of Doom']            = {
-            [[Interface\Icons\Spell_shadow_antimagicshell]], 
-            10
-        },
-        ['Rain of Fire']              = {
-            [[Interface\Icons\Spell_shadow_rainoffire]], 
-            6
-        },
-        ['Ritual of Summoning']       = {
-            [[Interface\Icons\Spell_shadow_twilight]], 
+        ['Drain Mana']        = {
+            [[Interface\Icons\Spell_shadow_siphonmana]],
             5
         },
-        ['Searing Pain']              = {
-            [[Interface\Icons\Spell_fire_soulburn]], 
-            1.5
-        },
-        ['Seduction']                 = {
-            [[Interface\Icons\Spell_shadow_mindsteal]], 
-            1.5
-        },
-        ['Shadow Bolt']               = {
-            [[Interface\Icons\Spell_shadow_shadowbolt]], 
-            2.5
-        },
-        ['Soul Fire']                 = {
-            [[Interface\Icons\Spell_fire_fireball02]], 
+        ['Drain Soul']        = {
+            [[Interface\Icons\Spell_shadow_haunting]],
             4
         },
-        ['Summon Dreadsteed']         = {
-            [[Interface\Icons\Ability_mount_dreadsteed]], 
-            3
-        },
-        ['Summon Felhunter']          = {
-            [[Interface\Icons\Spell_shadow_summonfelhunter]], 
+        ['Hellfire']          = {
+            [[Interface\Icons\Spell_holy_heal]],
             6
         },
-        ['Summon Felsteed']           = {
-            [[Interface\Icons\Spell_nature_swiftness]], 
-            3
-        },
-        ['Summon Imp']                = {
-            [[Interface\Icons\Spell_shadow_summonimp]], 
-            6
-        },
-        ['Summon Succubus']           = {
-            [[Interface\Icons\Spell_shadow_summonsuccubus]], 
-            6
-        },
-        ['Summon Voidwalker']         = {
-            [[Interface\Icons\Spell_shadow_summonvoidwalker]], 
+        ['Rain of Fire']      = {
+            [[Interface\Icons\Spell_shadow_rainoffire]],
             6
         },
     }
@@ -791,17 +1445,21 @@
      MODUI_INSTANT_SPELLCASTS_TO_TRACK = {
             -- druid
         ['Moonfire']         = true,
+
             -- mage
         ['Arcane Explosion'] = true,
         ['Cone of Cold']     = true,
         ['Fire Blast']       = true,
         ['Frost Nova']       = true,
+
             -- priest
         ['Holy Nova']        = true,
+
             -- shaman
         ['Earth Shock']      = true,
         ['Flame Shock']      = true,
         ['Frost Shock']      = true,
+
             -- warlock
         ['Shadowburn']       = true,
     }

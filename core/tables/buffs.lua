@@ -91,9 +91,9 @@
             10
         },
         --['Ice Barrier']            = {
-            [[Interface\Icons\Spell_ice_lament]],
-            60
-        },
+        --    [[Interface\Icons\Spell_ice_lament]],
+        --    60
+        --},
             -- paladin
         ['Blessing of Protection'] = {
             [[Interface\Icons\Spell_holy_sealofprotection]],
@@ -176,5 +176,90 @@
         ['Charge Stun']              = {[[Interface\Icons\Spell_frost_stun]], 1, 'None'},
         ['Intercept Stun']           = {[[Interface\Icons\Spell_frost_stun]], 3, 'None'},
     }
+
+    MODUI_DEBUFF_REFRESHING_SPELLS = {
+            -- druid
+            ['Moonfire']                    = {
+                'Moonfire'
+            },
+            ['Rake']                        = {
+                'Rake'
+            },
+            -- hunter
+            ['Wing Clip']                   = {
+                'Wing Clip',
+            },
+            -- mage
+            ['Fireball']                    = {
+                'Fireball',
+            },       
+            ['Blizzard']                    = {
+                'Winter\'s Chill',
+            },
+            ['Cone of Cold']                = {
+                'Winter\'s Chill',
+            },
+            ['Frost Nova']                  = {
+                'Winter\'s Chill',
+            },
+            ['Frostbolt']                   = {
+                'Frostbolt', 
+                'Winter\'s Chill',
+            },
+            ['Scorch']                      = {
+                'Improved Scorch',
+            },
+            -- paladin
+            ['Judgement of the Crusader']   = {
+                'Judgement of the Crusader',
+                }, 
+            ['Judgement of Justice']        = {
+                'Judgement of Justice',
+            }, 
+            ['Judgement of Light']          = {
+                'Judgement of Light',
+            },
+            ['Judgement of Wisdom']         = {
+                'Judgement of Wisdom',
+            },
+            -- PRIEST
+            ['Mind Flay']                   = {
+                'Shadow Vulnerability',
+            },
+            ['Mind Blast']                  = {
+                'Shadow Vulnerability',
+            },
+            ['Shadow Vulnerability']        = {
+                'Shadow Vulnerability',
+            },
+            -- ROGUE
+            ['Hemorrhage']                  = {
+                'Hemorrhage',
+            },
+            ['Wound Poison IV']             = {
+                'Wound Poison IV',
+            },
+            ['Deadly Poison V']             = {
+                'Deadly Poison V',
+            },
+            -- SHAMAN
+            ['Flame Shock']                 = {
+                'Flame Shock',
+            },
+            ['Frost Shock']                 = {
+                'Frost Shock',
+            },
+            -- WARLOCK
+            ['Immolate']                    = {
+                'Immolate',
+            },
+            -- WARRRIOR
+            ['Hamstring']                   = {
+                'Hamstring',
+            },
+            ['Mortal Strike']               = {
+                'Mortal Strike',
+            },
+        }
 
     --

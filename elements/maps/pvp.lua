@@ -16,8 +16,8 @@
 
     local AddMap = function()
         local bu = CreateFrame('Frame', 'modbmap_border', BattlefieldMinimap)
-        bu:SetPoint('TOPLEFT', BattlefieldMinimap2, -2, 0)
-        bu:SetPoint('BOTTOMRIGHT', BattlefieldMinimap11, 0, 20)
+        bu:SetPoint('TOPLEFT', BattlefieldMinimap2)
+        bu:SetPoint('BOTTOMRIGHT', BattlefieldMinimap11, 0, 22)
 
         if  skin.enable then
             modSkin(bu)
@@ -115,12 +115,14 @@
             local  name = blip.name or UnitName(blip.unit)
             if not name then break end
 
-            blip:SetWidth(24) blip:SetHeight(24)
+            blip:SetWidth(24) 
+            blip:SetHeight(24)
 
             if  string.find(blip.unit, 'raid', 1, true) then
                 local _, _, sub = GetRaidRosterInfo(string.sub(blip.unit, 5))
                 local _, class  = UnitClass(blip.unit)
                 local c         = RAID_CLASS_COLORS[class]
+
                 icon:SetTexture(string.format('Interface\\AddOns\\md\\art\\blips\\raid'..'%d', sub))
                 icon:SetPoint('CENTER', blip)
 
@@ -134,7 +136,7 @@
                 end
 
                 for  _, v in pairs(MODUI_CARRIERS) do
-                    if  v == name then
+                    if  string.find(v, string.lower(name)) then
                         local x = UnitFactionGroup'player' == 'Alliance' and 'Horde' or 'Alliance'
                         icon:SetTexture('Interface\\WorldStateFrame\\'..x..'Flag')
                         icon:SetPoint('CENTER', 8, 8)

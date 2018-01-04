@@ -35,11 +35,21 @@
 
         MiniMapTrackingFrame:SetFrameStrata'MEDIUM'
         MiniMapTrackingFrame:ClearAllPoints()
-        MiniMapTrackingFrame:SetPoint('TOP', -64, 4)
+        MiniMapTrackingFrame:SetPoint('TOP', 45, -6)
 
         GameTimeFrame:SetScale(.76)
         GameTimeFrame:ClearAllPoints() 
-        GameTimeFrame:SetPoint('BOTTOM', 84, 24)
+        GameTimeFrame:SetPoint('BOTTOM', Minimap, 0, -6)
+        GameTimeFrame:Hide()
+        GameTimeFrame.HOnEnter = GameTimeFrame:GetScript'OnEnter'
+
+        GameTimeFrame:SetScript('OnEnter', function()
+            GameTimeFrame:HOnEnter()
+            this:Show()
+        end)
+
+        MiniMapBattlefieldFrame:ClearAllPoints()
+        MiniMapBattlefieldFrame:SetPoint('BOTTOMLEFT', 2, 8)
 
         MiniMapMailFrame:ClearAllPoints()
         MiniMapMailFrame:SetPoint('TOPRIGHT', 0, -14)
@@ -61,7 +71,18 @@
         end
     end
 
+    local OnEnter = function()
+        GameTimeFrame:Show()
+    end
+
+    local OnLeave = function()
+        GameTimeFrame:Hide()
+    end
+
     Minimap_Update = Update
+
+    Minimap:SetScript('OnEnter', OnEnter)
+    Minimap:SetScript('OnLeave', OnLeave)
 
     local e = CreateFrame'Frame'
     e:RegisterEvent'PLAYER_LOGIN'

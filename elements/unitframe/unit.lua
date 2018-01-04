@@ -342,16 +342,16 @@
         end
 
         TargetofTargetName:ClearAllPoints()
-        
+
         if  name and string.len(name) > 12 then
-            TargetofTargetName:SetPoint('TOPLEFT', TargetofTargetTextureFrame, 46, -29)
+            TargetofTargetName:SetPoint('TOPLEFT', TargetofTargetTextureFrame, 49, -29)
         else
-            TargetofTargetName:SetPoint('TOPLEFT', TargetofTargetTextureFrame, 46, -24)
+            TargetofTargetName:SetPoint('TOPLEFT', TargetofTargetTextureFrame, 49, -24)
         end
     end
 
     local UpdateMember = function()
-         H.PartyMemberFrame_UpdateMember()
+        H.PartyMemberFrame_UpdateMember()
         AddPartyClasses()
     end
 

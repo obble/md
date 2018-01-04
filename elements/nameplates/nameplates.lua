@@ -12,7 +12,7 @@
     local pets = {
         'Ancona Chicken',
         'Black Kingsnake', 'Brown Snake', 'Crimson Snake',
-        'Bombay', 'Cornish Rex', 'Orange Tabby', 'Siamese', 'Silver Tabby',
+        'Bombay', 'casnish Rex', 'Orange Tabby', 'Siamese', 'Silver Tabby',
         'Cockatiel', 'Great Horned Owl', 'Green Wing Macaw', 'Hawk Owl',  'Hyacinth Macaw', 'Senegal',
         'Cockroach',
         'Lifelike Mechanical Toad', 'Lil\' Smokey', 'Mechanical Chicken', 'Mechanical Squirrel', 'Pet Bombling',
@@ -39,7 +39,7 @@
         'Mouse', 'Rat', 'Dig Rat',
         'Ram',
         'School of Fish',
-        'Scorpion',
+        'Scaspion',
         'Sheep',
         'Snake',
         'Swine',
@@ -196,7 +196,7 @@
         plate.totem.icon:SetAllPoints()
         plate.totem.icon:SetTexCoord(.1, .9, .15, .85)
 
-        if class == 'ROGUE' or class == 'DRUID' then
+        if  class == 'ROGUE' or class == 'DRUID' then
             plate.cp = plate:CreateFontString(nil, 'OVERLAY')
             plate.cp:SetFont(STANDARD_TEXT_FONT, 18, 'OUTLINE')
             plate.cp:SetPoint('LEFT', health)
@@ -209,7 +209,7 @@
         plate.rank:SetPoint('RIGHT', name, 'LEFT', -3, 1)
         plate.rank:Hide()
 
-        plate.pvp = health.new:CreateTexture(nil, 'OVERLAY', nil, 7)
+        plate.pvp = plate:CreateTexture(nil, 'OVERLAY', nil, 7)
         plate.pvp:SetWidth(30)
         plate.pvp:SetHeight(18)
         plate.pvp:SetPoint('RIGHT', health.new, 'LEFT', 30, 7)
@@ -229,6 +229,11 @@
 
             modSkin(plate.totem)
             modSkinColor(plate.totem, skin.r, skin.g, skin.b)
+
+            for i = 1, 4 do
+                modSkin(plate.buffs[i])
+                modSkinColor(plate.buffs[i], skin.r, skin.g, skin.b)
+            end
         end
 
         plate.skinned = true
@@ -275,11 +280,11 @@
 
     local AddCP = function(plate)       -- COMBOPOINT
         if plate.cp then
-            local health = plate:GetChildren()
-            local _, _, name = plate:GetRegions()
-            local text   = name:GetText()
-            local target = GetUnitName'target'
-            local cp 	 = GetComboPoints()
+            local health        = plate:GetChildren()
+            local _, _, name    = plate:GetRegions()
+            local text          = name:GetText()
+            local target        = GetUnitName'target'
+            local cp 	        = GetComboPoints()
             plate.cp:Hide()
             if  target == text and health:GetAlpha() == 1 and cp > 0 then
                 plate.cp:Show()
@@ -297,8 +302,7 @@
             local target = GetUnitName'target'
             plate.cast:Hide()
 			if  text ~= nil then
-				-- local v = PROCESSCASTINGgetCast(text)
-                local v = nil
+				local v = MODUI_GetCast(text)
 				if v ~= nil then
 					if  GetTime() < v.timeEnd then
 						plate.cast:SetMinMaxValues(0, v.timeEnd - v.timeStart)
@@ -322,8 +326,7 @@
         local _, _, name = plate:GetRegions()
         local text = name:GetText()
     	plate.heal:Hide()
-    	--     local v = PROCESSCASTINGgetHeal(text)
-        local v = nil
+    	local v = MODUI_GetHeal(text)
     	if  v ~= nil then
     		if GetTime() < v.timeEnd then
     			local y = 14
@@ -349,8 +352,7 @@
     local AddBuff = function(plate)
         local _, _, name = plate:GetRegions()
         local n = name:GetText()
-        --  local v = PROCESSBUFFSgetBuffs(n)
-        local v
+        local v = MODUI_GetBuffs(n)
         for i = 1, 4 do
             plate.buffs[i]:Hide()
             plate.buffs[i].icon:SetTexture''

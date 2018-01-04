@@ -12,10 +12,10 @@
             else
                 this:AddMessage(
                     msg,
-                    arg1,
-                    arg2,
-                    arg3,
-                    1
+                    1,
+                    1,
+                    0,
+                    5
                 )
             end
         else

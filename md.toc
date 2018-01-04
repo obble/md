@@ -11,8 +11,26 @@ customise\preload.lua
 var\var.lua
 
 #  libraries
-# credits: shirsig
+#     credits: ace authors (nevcariel probably)
+libraries\ace\AceLibrary\AceLibrary.lua
+libraries\ace\AceOO-2.0\AceOO-2.0.lua
+libraries\ace\AceEvent-2.0\AceEvent-2.0.lua
+libraries\ace\AceAddon-2.0\AceAddon-2.0.lua
+libraries\ace\AceConsole-2.0\AceConsole-2.0.lua
+libraries\ace\AceHook-2.1\AceHook-2.1.lua
+#     credits: shirsig
 libraries\cleanup\Clean_Up.lua
+#     credits: gashole
+libraries\druidmanalib\DruidManaLib-1.0\DruidManaLib-1.0.lua
+#     credits: too lazy to look and they probably work at google now and dont give a shit anyway
+libraries\mobhealth\MobHealth3.lua
+libraries\mobhealth\MH3_Blizzard.lua
+#     credits: see above, also rhena i think
+libraries\rosterlib\RosterLib-2.0.lua
+libraries\proximitylib\ProximityLib.lua
+#     credits: rhena
+libraries\healcomm\HealComm-1.0\HealComm-1.0.lua
+libraries\healcomm\HealComm.lua
 
 #  deploy core
 core\api.lua
@@ -23,10 +41,15 @@ core\inventory.lua
 core\math.lua
 core\slashcmd.lua
 core\colour.lua
-core\tables\totems.lua
+core\tables\buffs.lua
+core\tables\interrupts.lua
+core\tables\modifiers.lua
 core\tables\spells.lua
+core\tables\totems.lua
 core\templates.lua
 core\transform.lua
+core\unitbuff.lua
+core\unitcasting.lua
 
 #  fonts
 typefaces\typefaces.lua
@@ -83,6 +106,9 @@ elements\combattext\ct.lua
 #  errors & system messages
 elements\error\error.lua
 
+#	group frame
+elements\group\unit.lua
+
 #  inventory system
 elements\inventory\bag\bag.lua
 elements\inventory\bank\bank.lua
@@ -115,11 +141,17 @@ elements\talents\talents.lua
 elements\tooltip\layout.lua
 elements\tooltip\content.lua
 
+#	pvp
+elements\pvp\ab.lua
+elements\pvp\wsg.lua
+
 #  quest tracker clickthrough
 elements\tracker\click.lua
 
 # unitframes
 elements\unitframe\aura.lua
+elements\unitframe\castbar.lua
+elements\unitframe\mobhealth.lua
 elements\unitframe\move.lua
 elements\unitframe\unit.lua
 

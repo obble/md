@@ -436,15 +436,11 @@
                 }
             ) do
             v:SetVertexColor(
-                MODUI_COLOUR_FOR_UI.colour.r, 
-                MODUI_COLOUR_FOR_UI.colour.g, 
-                MODUI_COLOUR_FOR_UI.colour.b
+                var.r, var.g, var.b
             )
         end
         this:SetBackdropBorderColor(
-            MODUI_COLOUR_FOR_UI.colour.r, 
-            MODUI_COLOUR_FOR_UI.colour.g, 
-            MODUI_COLOUR_FOR_UI.colour.b
+            var.r, var.g, var.b
         )
     end
 

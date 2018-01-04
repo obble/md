@@ -31,29 +31,43 @@
                     local t     = GetQuestLogTitle(qi)
                     local num   = GetNumQuestLeaderBoards(qi)
                     if  num > 0 then
-                        local title = _G['QuestWatchLine'..wi]
-                        --[[if  q[t] then
+                         local title = _G['QuestWatchLine'..wi]
+                        if  q[t] then
+                            print(t)
+                            wi = wi + 1
                             --  title is already in our objective tracker and is being duplicated!!
-                            title:SetText''
                             title:Hide()
-                            -- wi = wi + 1
                             for j = 1, num do
                                 local line = _G['QuestWatchLine'..wi]
-                                line:SetText''
                                 line:Hide()
                                 wi = wi + 1
                             end
-                        else]]
-                            if  title and  title:GetText() == t and not q[t] then  -- double-check
+                        else
+                            if  title and title:GetText() == t then  -- double-check
                                 AddLink(i, title, qi)
-                                q[t] = true
+                                tinsert(q, t)
                             end
-                        --end
+                        end
                     end
                 end
             end
         end
     end
+
+    local OnEvent = function()  -- eUI QoL: https://github.com/Ennea/eUI/blob/master/QoLI/QoLI.lua
+        local title = GetTitleText()
+        if  not title then return end
+        for i, v in pairs(QUEST_WATCH_LIST) do
+            if  title == GetQuestLogTitle(QUEST_WATCH_LIST[i].index) then
+                table.remove(QUEST_WATCH_LIST, i)
+                break
+            end
+        end
+    end
+
+    local e = CreateFrame'Frame'
+    e:RegisterEvent'QUEST_COMPLETE'
+    e:SetScript('OnEvent', OnEvent)
 
     QuestWatch_Update = Update
 
