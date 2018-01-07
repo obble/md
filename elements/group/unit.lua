@@ -28,6 +28,8 @@
         'PLAYER_ENTERING_WORLD',
         'CHAT_MSG_SYSTEM',
         'RAID_ROSTER_UPDATE',
+        'CHAT_MSG_BG_SYSTEM_ALLIANCE',
+        'CHAT_MSG_BG_SYSTEM_HORDE',
     }
 
     local roster = {
@@ -607,6 +609,11 @@
             e:UnregisterEvent'PLAYER_ENTERING_WORLD'
             u:SetScript('OnUpdate', function() AddSpawnButton(t, y, a) end)
             f.text:SetText'+'
+        elseif  event == 'CHAT_MSG_BG_SYSTEM_ALLIANCE' 
+        or      event == 'CHAT_MSG_BG_SYSTEM_HORDE' then
+            for i,  v in pairs(bu) do
+                AddFlag(v)
+            end
         elseif  event == 'RAID_ROSTER_UPDATE' then
             UpdateRoster()
             if  GetNumRaidMembers() < 1 or not UnitInRaid'player' then

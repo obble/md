@@ -93,15 +93,14 @@
 
     local UpdateNodes = function()
         local num = GetNumMapLandmarks()
-        if num > 1 then
-            for  i = 1, num do -- if this isnt 5 we fucked up
-                local name, description, index = GetMapLandmarkInfo(i)
-                local c     = {WorldMap_GetPOITextureCoords(index)}
-                bu[i].name  = name
-                bu[i].d     = description
-                bu[i].ic:SetTexCoord(c[1], c[2], c[3], c[4])
-                bu[i]:Show()
-            end
+        for  i = 1, num do
+            if i > 5 then break end
+            local name, description, index = GetMapLandmarkInfo(i)
+            local c     = {WorldMap_GetPOITextureCoords(index)}
+            bu[i].name  = name
+            bu[i].d     = description
+            bu[i].ic:SetTexCoord(c[1], c[2], c[3], c[4])
+            bu[i]:Show()
         end
     end
 

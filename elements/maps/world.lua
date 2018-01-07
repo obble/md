@@ -231,8 +231,8 @@
 
     local UpdateBlipColour = function(icon, unit)
         if  not (icon and unit) then return end
-        local _, name = UnitClass(unit)
-        if  not  name then return end
+        local _, class  = UnitClass(unit)
+        local name      = UnitName(unit)
 
         if  string.find(unit, 'raid', 1, true) then
             local _, _, subgroup = GetRaidRosterInfo(string.sub(unit, 5))
@@ -243,9 +243,7 @@
         end
 
         for  _, v in pairs(MODUI_CARRIERS) do
-            print('1: '..v)
             if  string.find(v, string.lower(name)) then
-                print(name)
                 local x = UnitFactionGroup'player' == 'Alliance' and 'Horde' or 'Alliance'
                 icon:SetTexture('Interface\\WorldStateFrame\\'..x..'Flag')
                 icon:SetPoint('CENTER', 8, 8)
@@ -254,7 +252,7 @@
             end
          end
 
-        local c = RAID_CLASS_COLORS[name]
+        local c = RAID_CLASS_COLORS[class]
         if  math.ceil(GetTime()) < .5 then
             if      UnitAffectingCombat(unit)   then    bu:SetVertexColor(.8,  0,  0)
             elseif  MapUnit_IsInactive(unit)    then    bu:SetVertexColor( 1, .8,  0)

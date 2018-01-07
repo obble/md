@@ -52,7 +52,7 @@
         local level          = UnitLevel'mouseover'
         local race           = UnitIsPlayer and UnitRace'mouseover' or ''
         local classification = classifications[UnitClassification'mouseover'] or ''
-        string:SetText('Level '..level..' '..'|cffffc800'..classification..'|r'..race)
+        string:SetText('Level '..(level == -1 and '??' or level)..' '..'|cffffc800'..classification..'|r'..race)
     end
 
     local AddClass = function(n, c)

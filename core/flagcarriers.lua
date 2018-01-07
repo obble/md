@@ -10,8 +10,8 @@
     }
 
     local banner    = {
-        ['Interface\\Icons\\INV_BannerPVP_01'] = {'Horde'},
-        ['Interface\Icons\INV_BannerPVP_02']   = {'Alliance'},
+        ['Interface\\Icons\\INV_BannerPVP_01']  = {'Horde'},
+        ['Interface\\Icons\\INV_BannerPVP_02']  = {'Alliance'},
     }
 
     local CheckRaidBuffs = function()
