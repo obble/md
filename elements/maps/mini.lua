@@ -39,13 +39,19 @@
 
         GameTimeFrame:SetScale(.76)
         GameTimeFrame:ClearAllPoints() 
-        GameTimeFrame:SetPoint('BOTTOM', Minimap, 0, -6)
+        GameTimeFrame:SetPoint('BOTTOM', Minimap, 0, -24)
         GameTimeFrame:Hide()
         GameTimeFrame.HOnEnter = GameTimeFrame:GetScript'OnEnter'
 
         GameTimeFrame:SetScript('OnEnter', function()
             GameTimeFrame:HOnEnter()
             this:Show()
+        end)
+        GameTimeFrame:SetScript('OnLeave', function()
+            GameTooltip:Hide()
+            if  GetMouseFocus() ~= 'Minimap' then 
+                this:Hide() 
+            end
         end)
 
         MiniMapBattlefieldFrame:ClearAllPoints()
@@ -80,9 +86,12 @@
     end
 
     Minimap_Update = Update
-
+    
     Minimap:SetScript('OnEnter', OnEnter)
     Minimap:SetScript('OnLeave', OnLeave)
+    
+    MinimapCluster:SetScript('OnEnter', OnEnter)
+    MinimapCluster:SetScript('OnLeave', OnLeave)
 
     local e = CreateFrame'Frame'
     e:RegisterEvent'PLAYER_LOGIN'

@@ -10,12 +10,18 @@
         ['Herb Gathering']  = [[Interface\Icons\spell_nature_naturetouchgrow]],
         ['Mining']          = [[Interface\Icons\trade_mining]],
         ['Fishing']         = [[Interface\Icons\trade_fishing]],
-        ['Aimed Shot']      = [[Interface\Icons\inv_spear_07]]
+        ['Aimed Shot']      = [[Interface\Icons\inv_spear_07]],
+        ['Cannibalize']     = [[Interface\Icons\ability_racial_cannibalize]]
     }
 
     H.UseAction                 = UseAction
     H.CastingBarFrame_OnEvent   = CastingBarFrame_OnEvent
     H.CastingBarFrame_OnUpdate  = CastingBarFrame_OnUpdate
+    
+    local getTimerLeft = function(tEnd)
+        local t = tEnd - GetTime()
+        if t > 5 then return decimal_round(t, 0) else return decimal_round(t, 1) end
+    end
 
     local PlayerCastingBarFrame = function()
         CastingBarFrame:ClearAllPoints()
@@ -36,7 +42,6 @@
         CastingBarText:SetPoint('TOPLEFT', CastingBarFrame, 'BOTTOMLEFT', 2, -5)
         CastingBarText:SetJustifyH'LEFT'
 
-        CastingBarFrame.Icon:SetPoint('RIGHT', CastingBarFrame, 'LEFT', -10, 1)
         CastingBarFrame.Icon:SetWidth(21)
         CastingBarFrame.Icon:SetHeight(21)
         CastingBarFrame.Icon:SetAlpha(1)
@@ -89,9 +94,9 @@
 
     local OnUpdate = function()
         H.CastingBarFrame_OnUpdate()
+        local _, max = CastingBarFrameStatusBar:GetMinMaxValues()
         ToggleIcon()
-        CastingBarFrame.Icon:ClearAllPoints()
-        CastingBarFrame.Icon:SetPoint('RIGHT', CastingBarFrame, 'CENTER', -(CastingBarText:GetStringWidth()/2 + 10), 2.5)
+        CastingBarFrame.Icon.Time:SetText(getTimerLeft(max)..'s')
     end
 
     local OnEvent = function()
@@ -113,13 +118,17 @@
 
         CastingBarFrame.Icon = CreateFrame('Frame', nil, CastingBarFrame)
         CastingBarFrame.Icon:SetWidth(25)
-        CastingBarFrame.Icon:SetHeight(12)
-        CastingBarFrame.Icon:SetPoint('RIGHT', CastingBarText, 'LEFT', 30, -1)
+        CastingBarFrame.Icon:SetHeight(18)
 
         CastingBarFrame.Icon.Texture = CastingBarFrame.Icon:CreateTexture(nil, 'ARTWORK')
         CastingBarFrame.Icon.Texture:SetAllPoints()
-        CastingBarFrame.Icon.Texture:SetTexCoord(.1, .9, .275, .725)
+        CastingBarFrame.Icon.Texture:SetTexCoord(.1, .9, .225, .775)
         CastingBarFrame.Icon.Texture:SetAlpha(.75)
+        CastingBarFrame.Icon:SetPoint('RIGHT', CastingBarFrame, 'LEFT', -12, 3)
+        
+        CastingBarFrame.Icon.Time = CastingBarFrame.Icon:CreateFontString(nil, 'ARTWORK', 'GameFontHighlight')
+         CastingBarFrame.Icon.Time:SetFont(STANDARD_TEXT_FONT, 11)
+        CastingBarFrame.Icon.Time:SetPoint('RIGHT', CastingBarFrame, 0, 3)
 
         if  skin.enable then
             modSkin(CastingBarFrame)
@@ -132,8 +141,6 @@
 
         CastingBarText:SetFont(STANDARD_TEXT_FONT, 12, 'OUTLINE')
         CastingBarText:SetShadowOffset(0, 0)
-        CastingBarText:ClearAllPoints()
-        CastingBarText:SetPoint('TOP', 0, 5)
 
         local tooltip = CreateFrame('GameTooltip', 'modCastbarTooltip', nil, 'GameTooltipTemplate')
         tooltip:SetOwner(WorldFrame, 'ANCHOR_NONE')

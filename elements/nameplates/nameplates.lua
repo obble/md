@@ -197,10 +197,32 @@
         plate.totem.icon:SetTexCoord(.1, .9, .15, .85)
 
         if  class == 'ROGUE' or class == 'DRUID' then
-            plate.cp = plate:CreateFontString(nil, 'OVERLAY')
-            plate.cp:SetFont(STANDARD_TEXT_FONT, 18, 'OUTLINE')
-            plate.cp:SetPoint('LEFT', health)
-            plate.cp:Hide()
+            plate.cp = {}
+            for i = 1, 5 do
+                plate.cp[i] = CreateFrame('Frame', nil, health.new)
+                plate.cp[i]:SetWidth(10)
+                plate.cp[i]:SetHeight(13)
+                plate.cp[i]:SetFrameStrata'HIGH'
+                plate.cp[i]:Hide()
+                
+                 if i == 1 then
+                    plate.cp[i]:SetPoint('TOPLEFT', health.new, 0, 5)
+                else
+                    plate.cp[i]:SetPoint('LEFT', plate.cp[i - 1], 'RIGHT')
+                end
+                
+                plate.cp[i].t = plate.cp[i]:CreateTexture(nil, 'BACKGROUND')
+                plate.cp[i].t:SetTexture[[Interface\ComboFrame\ComboPoint]]
+                plate.cp[i].t:SetAllPoints()
+                plate.cp[i].t:SetTexCoord(0, .375, 0, 1)
+                
+                plate.cp[i].highlight = plate.cp[i]:CreateTexture(nil, 'OVERLAY', nil, 7)
+                plate.cp[i].highlight:SetTexture[[Interface\ComboFrame\ComboPoint]]
+                plate.cp[i].highlight:SetWidth(7)
+                plate.cp[i].highlight:SetHeight(13)
+                plate.cp[i].highlight:SetTexCoord(.375, .5625, 0, 1)
+                plate.cp[i].highlight:SetPoint('TOPLEFT', plate.cp[i], 2, 0)
+            end
         end
 
         plate.rank = plate:CreateTexture(nil, 'OVERLAY')
@@ -279,17 +301,23 @@
     end
 
     local AddCP = function(plate)       -- COMBOPOINT
-        if plate.cp then
+        if  plate.cp then
             local health        = plate:GetChildren()
             local _, _, name    = plate:GetRegions()
             local text          = name:GetText()
             local target        = GetUnitName'target'
             local cp 	        = GetComboPoints()
-            plate.cp:Hide()
+            for i = 1, 5 do
+                plate.cp[i]:Hide()
+                plate.cp[i].highlight:Hide()
+            end
             if  target == text and health:GetAlpha() == 1 and cp > 0 then
-                plate.cp:Show()
-                plate.cp:SetText(string.rep('°', cp))
-                plate.cp:SetTextColor(.5*(cp - 1), 2/(cp - 1), .5/(cp - 1))
+                for i = 1, 5 do
+                    plate.cp[i]:Show()
+                end
+                for i = 1, cp do
+                    plate.cp[i].highlight:Show()
+                end
             end
         end
     end

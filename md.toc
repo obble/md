@@ -154,6 +154,7 @@ elements\unitframe\castbar.lua
 elements\unitframe\mobhealth.lua
 elements\unitframe\move.lua
 elements\unitframe\unit.lua
+elements\unitframe\totems.lua
 
 #  ~post-load custom behaviour
 customise\postload.lua
