@@ -11,13 +11,9 @@
         ['Mining']          = [[Interface\Icons\trade_mining]],
         ['Fishing']         = [[Interface\Icons\trade_fishing]],
         ['Aimed Shot']      = [[Interface\Icons\inv_spear_07]],
-<<<<<<< HEAD
         ['Cannibalize']     = [[Interface\Icons\ability_racial_cannibalize]],
         ['Skinning']        = [[Interface\Icons\inv_misc_pelt_wolf_01]]
-=======
-        ['Cannibalize']     = [[Interface\Icons\ability_racial_cannibalize]]
->>>>>>> 6a87bfd161f4a7f31eeb2d876b804c0b7dcd693e
-    }
+ }
 
     H.UseAction                 = UseAction
     H.CastingBarFrame_OnEvent   = CastingBarFrame_OnEvent

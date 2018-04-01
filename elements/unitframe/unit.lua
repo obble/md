@@ -344,11 +344,7 @@
         TargetofTargetName:ClearAllPoints()
 
         if  TargetofTargetName:GetStringWidth() > 100 then
-<<<<<<< HEAD
             TargetofTargetName:SetPoint('TOPLEFT', TargetofTargetTextureFrame, 47, -29)
-=======
-            TargetofTargetName:SetPoint('TOPLEFT', TargetofTargetTextureFrame, 49, -29)
->>>>>>> 6a87bfd161f4a7f31eeb2d876b804c0b7dcd693e
         else
             TargetofTargetName:SetPoint('TOPLEFT', TargetofTargetTextureFrame, 47, -24)
         end

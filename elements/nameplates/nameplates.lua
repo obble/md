@@ -206,11 +206,7 @@
                 plate.cp[i]:Hide()
                 
                  if i == 1 then
-<<<<<<< HEAD
                     plate.cp[i]:SetPoint('TOPLEFT', health.new, 0, 4)
-=======
-                    plate.cp[i]:SetPoint('TOPLEFT', health.new, 0, 5)
->>>>>>> 6a87bfd161f4a7f31eeb2d876b804c0b7dcd693e
                 else
                     plate.cp[i]:SetPoint('LEFT', plate.cp[i - 1], 'RIGHT')
                 end
