@@ -343,10 +343,10 @@
 
         TargetofTargetName:ClearAllPoints()
 
-        if  name and string.len(name) > 12 then
-            TargetofTargetName:SetPoint('TOPLEFT', TargetofTargetTextureFrame, 49, -29)
+        if  TargetofTargetName:GetStringWidth() > 100 then
+            TargetofTargetName:SetPoint('TOPLEFT', TargetofTargetTextureFrame, 47, -29)
         else
-            TargetofTargetName:SetPoint('TOPLEFT', TargetofTargetTextureFrame, 49, -24)
+            TargetofTargetName:SetPoint('TOPLEFT', TargetofTargetTextureFrame, 47, -24)
         end
     end
 

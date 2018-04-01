@@ -85,6 +85,7 @@ elements\actionbars\cd.lua
 elements\actionbars\hotkey.lua
 elements\actionbars\dock.lua
 elements\actionbars\keypress.lua
+elements\actionbars\menu.lua
 elements\actionbars\range.lua
 elements\actionbars\stats.lua
 elements\actionbars\xp.lua
@@ -154,6 +155,7 @@ elements\unitframe\castbar.lua
 elements\unitframe\mobhealth.lua
 elements\unitframe\move.lua
 elements\unitframe\unit.lua
+elements\unitframe\totems.lua
 
 #  ~post-load custom behaviour
 customise\postload.lua

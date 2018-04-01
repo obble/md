@@ -186,7 +186,7 @@
             f:SetScript('OnMouseWheel', OnMouseWheel)
 
             ChatFrameMenuButton:ClearAllPoints() 
-            ChatFrameMenuButton:SetPoint('BOTTOMRIGHT', MainMenuBar, 'BOTTOMLEFT', -7, 7)
+            ChatFrameMenuButton:SetPoint('BOTTOMRIGHT', MainMenuBar, 'BOTTOMLEFT', -34, 7)
             ChatFrameMenuButton:SetParent(MainMenuBar)
             ChatFrameMenuButton:SetFrameLevel(4)
             -- ChatFrameMenuButton:GetNormalTexture():SetVertexColor(.5, .5, .5)

@@ -801,7 +801,7 @@
 
 	local Fear = function()
 		local f 	= '(.+) attempts to run away in fear!'
-		local ff 	= string.find(arg1, fear)
+		local ff 	= string.find(arg1, f)
 
 		if  ff then
 			local t = arg2			

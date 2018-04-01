@@ -118,6 +118,7 @@
         end
 
         for i = 0, 3 do
+           _G['ReputationXPBarTexture'..i]:Hide()
             for _, v in pairs(
                 {
                     _G['MainMenuXPBarTexture'..i],
@@ -129,7 +130,7 @@
                 v:SetTexCoord(0, 1, .82, .83)
                 v:SetHeight(5)
                 v:ClearAllPoints()
-                v:SetPoint(x[1], x[2], x[3], x[4], x[5] - 5)
+                v:SetPoint(x[1], x[2], x[3], x[4], x[5] - 4)
             end
 
             local f = _G['MainMenuXPBarTexture'..i]
